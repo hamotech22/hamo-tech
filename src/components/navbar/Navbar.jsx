@@ -50,39 +50,30 @@ export default function Navbar() {
 
           {/* Actions */}
           <div className="flex items-center gap-2">
-            {/* Language button */}
-            {/* <button
+            <button
               type="button"
+              dir="ltr"
               onClick={() => setLang(lang === "en" ? "ar" : "en")}
               aria-label={t.nav.changeLanguage}
-              className="inline-flex h-10 items-center gap-1.5 rounded-full px-3 text-sm font-medium text-zinc-700 transition hover:bg-zinc-900/5"
+              className="relative grid h-9 w-22 grid-cols-2 items-center rounded-full bg-zinc-900/5 p-1 text-xs font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF4D0A]"
             >
-              <span className="text-base">🌐</span>
-              {lang === "en" ? "AR" : "EN"}
-            </button> */}
-
-
-            <button
-  type="button"
-  dir="ltr"
-  onClick={() => setLang(lang === "en" ? "ar" : "en")}
-  aria-label={t.nav.changeLanguage}
-  className="relative grid h-9 w-22 grid-cols-2 items-center rounded-full bg-zinc-900/5 p-1 text-xs font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF4D0A]"
->
-  <span
-    aria-hidden="true"
-    className={`absolute inset-y-1 start-1 w-[calc(50%-4px)] rounded-full bg-zinc-950 shadow-sm transition-transform duration-300 ease-out ${
-      lang === "ar" ? "translate-x-full" : ""
-    }`}
-  />
-  <span className={`relative z-10 text-center transition-colors duration-300 ${lang === "en" ? "text-white" : "text-zinc-500"}`}>
-    EN
-  </span>
-  <span className={`relative z-10 text-center transition-colors duration-300 ${lang === "ar" ? "text-white" : "text-zinc-500"}`}>
-    AR
-  </span>
-</button>
-
+              <span
+                aria-hidden="true"
+                className={`absolute inset-y-1 start-1 w-[calc(50%-4px)] rounded-full bg-zinc-950 shadow-sm transition-transform duration-300 ease-out ${
+                  lang === "ar" ? "translate-x-full" : ""
+                }`}
+              />
+              <span
+                className={`relative z-10 text-center transition-colors duration-300 ${lang === "en" ? "text-white" : "text-zinc-500"}`}
+              >
+                EN
+              </span>
+              <span
+                className={`relative z-10 text-center transition-colors duration-300 ${lang === "ar" ? "text-white" : "text-zinc-500"}`}
+              >
+                AR
+              </span>
+            </button>
 
             <Link
               to="/contact"
