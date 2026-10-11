@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link, useParams, Navigate } from "react-router-dom";
 import useLanguage from "../../context/useLanguage";
 
-const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff4d00]";
+const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
 
 export default function BlogPost() {
   const { t } = useLanguage();
@@ -44,7 +44,7 @@ export default function BlogPost() {
           data-aos="fade-up"
           data-aos-duration="700"
           data-aos-offset="30"
-          className={`inline-flex items-center gap-1.5 text-sm font-medium text-zinc-500 transition-colors hover:text-[#ff4d00] ${focusRing} rounded-md`}
+          className={`inline-flex items-center gap-1.5 text-sm font-medium text-zinc-500 transition-colors hover:text-brand ${focusRing} rounded-md`}
         >
           <span aria-hidden="true" className="rtl:rotate-180">
             ←
@@ -57,7 +57,7 @@ export default function BlogPost() {
             {post.date}
           </time>
 
-          <h1 className="mt-3 text-balance bg-linear-to-b from-zinc-950 to-zinc-600 bg-clip-text text-3xl font-semibold leading-[1.15] tracking-tight text-transparent sm:text-5xl">
+          <h1 className="mt-3 text-balance text-3xl font-semibold leading-[1.15] tracking-tight text-zinc-950 after:mt-4 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand sm:text-5xl">
             {post.title}
           </h1>
 

@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useLanguage from "../../context/useLanguage";
+import brandLogo from "../../assets/images/1__2.png";
 
 const navLinks = [
   { key: "home", href: "/" },
@@ -9,45 +10,52 @@ const navLinks = [
   { key: "projects", href: "/projects" },
   { key: "about", href: "/about" },
   { key: "blog", href: "/blog" },
-  { key: "testimonials", href: "/testimonials" },
   { key: "contact", href: "/contact" },
 ];
 
 const legalLinks = [
-  { key: "privacy", href: "/contact" },
-  { key: "terms", href: "/contact" },
+  { key: "servicePolicy", href: "/service-policy" },
+  { key: "terms", href: "/terms" },
 ];
 
-const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff4d00]";
+const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand";
 const API_URL = "http://localhost:3000/socials";
 
 export default function Footer() {
   const { t } = useLanguage();
-  const [socials, setSocial]=useState([]);
+  const [socials, setSocial] = useState([]);
 
-useEffect(()=>{
-   axios.get(API_URL).then((res)=> setSocial(res.data))
-      .catch((error) => console.error("Failed to load socials links:", error))
-},[]);
-
+  useEffect(() => {
+    axios
+      .get(API_URL)
+      .then((res) => setSocial(res.data))
+      .catch((error) => console.error("Failed to load socials links:", error));
+  }, []);
 
   return (
-    <footer className="relative isolate w-full overflow-hidden bg-[#111111] px-5 pt-16 sm:px-6 sm:pt-20">
-      {/* Background glow */}
+    <footer className="relative isolate w-full overflow-hidden border-t border-white/10 bg-[linear-gradient(110deg,#071522_0%,#102436_55%,#111b2b_100%)] px-5 pt-16 sm:px-6 sm:pt-20">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-40 left-1/2 -z-10 size-96 -translate-x-1/2 rounded-full bg-[#ff4d00]/15 blur-3xl"
+        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-px bg-[linear-gradient(90deg,transparent,#38bdf8_35%,#7dd3fc_65%,transparent)] opacity-70"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -start-32 -top-40 -z-10 size-96 rounded-full bg-brand/20 blur-[100px]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -end-32 top-0 -z-10 size-80 rounded-full bg-sky-400/10 blur-[100px]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.08] [background-image:linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] [background-size:48px_48px] [mask-image:linear-gradient(to_bottom,black,transparent_75%)]"
       />
 
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col items-center gap-10 text-center">
           {/* Logo */}
-          <Link to="/" className={`flex items-center gap-3 rounded-lg ${focusRing}`}>
-            <span className="relative block size-9">
-              <span className="absolute left-0 top-0 h-4 w-full rounded-b-full bg-white" />
-              <span className="absolute bottom-0 left-0 h-4 w-full rounded-t-full bg-[#ff4d00]" />
-            </span>
-            <span className="text-2xl font-semibold tracking-tight text-white">{t.nav.logo}</span>
+          <Link to="/" aria-label="Hamo-Tech home" className={`rounded-lg ${focusRing}`}>
+            <img src={brandLogo} alt="Hamo-Tech" className="h-16 w-64 rounded-lg object-cover" />
           </Link>
 
           {/* Main menu */}
@@ -72,7 +80,7 @@ useEffect(()=>{
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.name}
-                className={`grid size-11 place-items-center rounded-full border border-white/10 text-zinc-400 transition duration-200 hover:-translate-y-0.5 hover:border-[#ff4d00] hover:bg-[#ff4d00] hover:text-white ${focusRing}`}
+                className={`grid size-11 place-items-center rounded-full border border-white/10 text-zinc-400 transition duration-200 hover:-translate-y-0.5 hover:border-brand hover:bg-brand hover:text-white ${focusRing}`}
               >
                 <svg viewBox="0 0 256 256" aria-hidden="true" className="size-5 fill-current">
                   <path d={social.path} />
@@ -88,8 +96,13 @@ useEffect(()=>{
             <p>{t.footer.copyright}</p>
             <p>
               {t.footer.credit}{" "}
-              <a href={`mailto:hamotech22@gmail.com`} target="_blank" rel="noopener noreferrer" className="text-[#ff4d00] transition hover:text-white">
-                hamotech.
+              <a
+                href="mailto:hamotech22@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand transition hover:text-white"
+              >
+                {t.nav.logo}
               </a>
             </p>
           </div>
@@ -102,14 +115,6 @@ useEffect(()=>{
             ))}
           </div>
         </div>
-
-        {/* Oversized wordmark, cropped by the bottom edge */}
-        {/* <p
-          aria-hidden="true"
-          className="-mb-[0.14em] select-none bg-linear-to-b from-white/12 to-transparent bg-clip-text text-center text-[14vw] font-semibold leading-none tracking-tighter text-transparent lg:text-[11rem]"
-        >
-          Osama Hreka
-        </p> */}
       </div>
     </footer>
   );

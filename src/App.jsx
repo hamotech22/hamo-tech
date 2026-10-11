@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import AOS from "aos";
 
 import Footer from "./components/footer/Footer";
@@ -8,14 +8,13 @@ import Navbar from "./components/navbar/Navbar";
 import About from "./pages/about/About";
 import BlogList from "./pages/blog/BlogList";
 import BlogPost from "./pages/blog/BlogDetail";
-import ContactUs from "./pages/contact/ContactUs";
 import Home from "./pages/home/Home";
 import CTA from "./pages/cta/CTA";
 import ProjectsList from "./pages/projects/ProjectsList";
 import ProjectDetail from "./pages/projects/ProjectDetail";
 import Services from "./pages/services/Services";
 // import ServiceDetail from "./pages/services/ServiceDetail";
-import Testimonials from "./pages/testimonials/Testimonials";
+import LegalPage from "./pages/legal/LegalPage";
 import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 import BackToTop from "./components/backToTop/BackToTop";
 
@@ -49,7 +48,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/contact" element={<Navigate to="/#contact" replace />} />
         <Route path="/blog" element={<BlogList />} />
         <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/projects" element={<ProjectsList />} />
@@ -57,8 +56,10 @@ export default function App() {
         <Route path="/portfolio" element={<ProjectsList />} />
         <Route path="/services" element={<Services />} />
         {/* <Route path="/services/:slug" element={<ServiceDetail />} /> */}
-        <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/testimonials" element={<Navigate to="/service-policy" replace />} />
         <Route path="/cta" element={<CTA />} />
+        <Route path="/service-policy" element={<LegalPage documentKey="servicePolicy" />} />
+        <Route path="/terms" element={<LegalPage documentKey="terms" />} />
       </Routes>
 
       <BackToTop/>

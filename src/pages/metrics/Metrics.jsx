@@ -1,14 +1,7 @@
 import { Link } from "react-router-dom";
 import useLanguage from "../../context/useLanguage";
 
-const metrics = [
-  { number: "200+" },
-  { number: "10+" },
-  { number: "20+" },
-  { number: "98%" },
-];
-
-const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff4d00]";
+const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
 
 export default function Metrics() {
   const { t } = useLanguage();
@@ -18,7 +11,7 @@ export default function Metrics() {
         {/* Header */}
         <div className="mb-12 flex flex-col gap-6 sm:mb-16 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
-            <h2 className="text-balance bg-linear-to-b from-zinc-950 to-zinc-600 bg-clip-text text-4xl font-semibold leading-[1.1] tracking-tight text-transparent sm:text-5xl">
+            <h2 className="text-balance text-4xl font-semibold leading-[1.1] tracking-tight text-zinc-950 after:mt-4 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand sm:text-5xl">
               {t.metrics.title}
             </h2>
 
@@ -29,7 +22,7 @@ export default function Metrics() {
 
           <Link
             to="/about"
-            className={`group inline-flex w-fit items-center gap-2.5 rounded-full border border-[#ff4d00]/40 px-5 py-2.5 text-sm font-medium text-[#ff4d00] transition hover:border-[#ff4d00] hover:bg-[#ff4d00] hover:text-white ${focusRing}`}
+            className={`group inline-flex w-fit items-center gap-2.5 rounded-full border border-brand/40 px-5 py-2.5 text-sm font-medium text-brand transition hover:border-brand hover:bg-brand hover:text-white ${focusRing}`}
           >
             {t.metrics.action}
             <svg viewBox="0 0 256 256" aria-hidden="true" className="size-4 fill-current transition duration-200 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1">
@@ -39,14 +32,14 @@ export default function Metrics() {
         </div>
 
         {/* Stats panel: one dark block, hairline dividers made with gap-px over a lighter background */}
-        <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl bg-zinc-800 shadow-2xl shadow-zinc-900/15 ring-1 ring-zinc-900/10 md:grid-cols-4">
-          {metrics.map((metric, index) => (
+        <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl bg-[linear-gradient(110deg,#071522_0%,#102436_55%,#111b2b_100%)] shadow-2xl shadow-zinc-900/15 ring-1 ring-zinc-900/10 md:grid-cols-4">
+          {t.metrics.values.map((value, index) => (
             <div
               key={t.metrics.labels[index]}
-              className="flex flex-col-reverse justify-between gap-10 bg-zinc-950 p-6 transition-colors duration-300 hover:bg-zinc-900 md:gap-16 md:p-8"
+              className="flex flex-col-reverse justify-between gap-10 bg-[linear-gradient(110deg,#071522_0%,#102436_55%,#111b2b_100%)] p-6 transition duration-300 hover:brightness-125 md:gap-16 md:p-8"
             >
               <dt className="text-sm leading-5 text-zinc-400">{t.metrics.labels[index]}</dt>
-              <dd className="text-4xl font-semibold tabular-nums tracking-tight text-white sm:text-5xl">{metric.number}</dd>
+              <dd className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">{value}</dd>
             </div>
           ))}
         </dl>

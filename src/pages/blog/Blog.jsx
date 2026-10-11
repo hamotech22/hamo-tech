@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import useLanguage from "../../context/useLanguage";
 
-const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff4d00]";
+const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
 
 function ArrowIcon() {
   return (
@@ -52,7 +52,7 @@ export default function Blog() {
         {/* Header */}
         <div className="mb-12 flex flex-col gap-6 sm:mb-16 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl" data-aos="fade-up" data-aos-duration="700" data-aos-easing="ease-out-cubic" data-aos-offset="30">
-            <h2 className="text-balance bg-linear-to-b from-zinc-950 to-zinc-600 bg-clip-text text-4xl font-semibold leading-[1.2] tracking-tight text-transparent sm:text-5xl">
+            <h2 className="text-balance text-4xl font-semibold leading-[1.2] tracking-tight text-zinc-950 after:mt-4 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand sm:text-5xl">
               {t.blog.homeTitle}
             </h2>
 
@@ -65,7 +65,7 @@ export default function Blog() {
             data-aos-duration="700"
             data-aos-easing="ease-out-cubic"
             data-aos-offset="30"
-            className={`group inline-flex w-fit items-center gap-2.5 rounded-full border border-[#ff4d00]/40 px-5 py-2.5 text-sm font-medium text-[#ff4d00] transition hover:border-[#ff4d00] hover:bg-[#ff4d00] hover:text-white ${focusRing}`}
+            className={`group inline-flex w-fit items-center gap-2.5 rounded-full border border-brand/40 px-5 py-2.5 text-sm font-medium text-brand transition hover:border-brand hover:bg-brand hover:text-white ${focusRing}`}
           >
             {t.blog.viewAll}
             <ArrowIcon />
@@ -91,7 +91,7 @@ export default function Blog() {
             </div>
 
             <div className="flex flex-col px-2 pb-2 sm:px-4 md:py-4 lg:pe-8">
-              <h3 className="text-balance text-2xl font-semibold leading-[1.3] tracking-tight text-zinc-950 transition-colors group-hover:text-[#ff4d00] sm:text-3xl">
+              <h3 className="text-balance text-2xl font-semibold leading-[1.3] tracking-tight text-zinc-950 transition-colors group-hover:text-brand sm:text-3xl">
                 {featured.title}
               </h3>
 
@@ -140,7 +140,7 @@ export default function Blog() {
                 />
               </div>
 
-              <h3 className="mt-5 text-lg font-semibold leading-snug tracking-tight text-zinc-950 transition-colors group-hover:text-[#ff4d00]">
+              <h3 className="mt-5 text-lg font-semibold leading-snug tracking-tight text-zinc-950 transition-colors group-hover:text-brand">
                 {post.title}
               </h3>
 

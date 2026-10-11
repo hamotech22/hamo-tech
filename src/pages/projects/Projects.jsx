@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import useLanguage from "../../context/useLanguage";
 
-const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff4d00]";
+const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
 
 
 
@@ -29,7 +29,7 @@ export default function Projects({ onLoadingChange }) {
           data-aos-offset="30"
         >
           <div className="max-w-2xl" data-aos="fade-up" data-aos-duration="700" data-aos-offset="30">
-            <h2 className="text-balance bg-linear-to-b from-zinc-950 to-zinc-600 bg-clip-text text-4xl font-semibold leading-[1.1] tracking-tight text-transparent sm:text-5xl">
+            <h2 className="text-balance text-4xl font-semibold leading-[1.1] tracking-tight text-zinc-950 after:mt-4 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand sm:text-5xl">
               {t.projects.homeTitle}
             </h2>
 
@@ -38,7 +38,7 @@ export default function Projects({ onLoadingChange }) {
             </p>
           </div>
 
-          <Link to="/projects"className={`group inline-flex w-fit items-center gap-2.5 rounded-full border border-[#ff4d00]/40 px-5 py-2.5 text-sm font-medium text-[#ff4d00] transition hover:border-[#ff4d00] hover:bg-[#ff4d00] hover:text-white ${focusRing}`}>
+          <Link to="/projects"className={`group inline-flex w-fit items-center gap-2.5 rounded-full border border-brand/40 px-5 py-2.5 text-sm font-medium text-brand transition hover:border-brand hover:bg-brand hover:text-white ${focusRing}`}>
             {t.projects.viewAll}
             <svg viewBox="0 0 256 256" aria-hidden="true" className="size-4 fill-current transition duration-200 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1">
               <path d="M221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 0-16h156.69l-58.35-58.34a8 8 0 0 1 11.32-11.32l72 72a8 8 0 0 1 0 11.32Z" />
@@ -78,7 +78,7 @@ export default function Projects({ onLoadingChange }) {
 
               <div className="mt-5 flex items-start justify-between gap-4 px-1">
                 <div>
-                  <h3 className="text-xl font-semibold tracking-tight text-zinc-950 transition-colors group-hover:text-[#ff4d00]">
+                  <h3 className="text-xl font-semibold tracking-tight text-zinc-950 transition-colors group-hover:text-brand">
                     {project.title}
                   </h3>
                   <p className="mt-1 text-sm text-zinc-500">{project.client}</p>

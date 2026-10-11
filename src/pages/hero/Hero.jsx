@@ -81,7 +81,7 @@ export default function Hero() {
         </span>
 
         <h1
-          className="mt-6 text-balance bg-linear-to-b from-zinc-950 to-zinc-600 bg-clip-text text-5xl font-semibold leading-[1.05] tracking-tight text-transparent sm:text-6xl lg:text-7xl"
+          className="mt-6 text-balance text-5xl font-semibold leading-[1.05] tracking-tight text-zinc-950 after:mx-auto after:mt-5 after:block after:h-1 after:w-16 after:rounded-full after:bg-brand sm:text-6xl lg:text-7xl"
           data-aos="fade-up"
         >
           {t.hero.title1}

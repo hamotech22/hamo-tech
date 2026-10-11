@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import useLanguage from "../../context/useLanguage";
 
-const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff4d00]";
+const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
 
 export default function ProjectCard({ project }) {
   const { t } = useLanguage();
@@ -33,7 +33,7 @@ export default function ProjectCard({ project }) {
 
       <div className="mt-5 flex items-start justify-between gap-4 px-1">
         <div>
-          <h3 className="text-xl font-semibold tracking-tight text-zinc-950 transition-colors group-hover:text-[#ff4d00]">
+          <h3 className="text-xl font-semibold tracking-tight text-zinc-950 transition-colors group-hover:text-brand">
             {project.title}
           </h3>
           <p className="mt-1 text-sm text-zinc-500">{project.client}</p>

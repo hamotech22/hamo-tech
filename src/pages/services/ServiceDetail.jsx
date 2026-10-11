@@ -47,14 +47,14 @@
 //       <div className="mx-auto max-w-4xl">
 //         <Link
 //           to="/services"
-//           className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-zinc-500 transition hover:text-[#ff4d00]"
+//           className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-zinc-500 transition hover:text-brand"
 //         >
 //           <span aria-hidden="true">←</span>
 //           Back to services
 //         </Link>
 
 //         <div className="rounded-3xl border border-zinc-200 bg-zinc-50 p-6 shadow-sm shadow-zinc-900/5 sm:p-8 md:p-10">
-//           <span className="inline-flex rounded-full bg-[#ff4d00]/10 px-3 py-1.5 text-xs font-medium uppercase tracking-[0.14em] text-[#ff4d00]">
+//           <span className="inline-flex rounded-full bg-brand/10 px-3 py-1.5 text-xs font-medium uppercase tracking-[0.14em] text-brand">
 //             Photography service
 //           </span>
 

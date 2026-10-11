@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import useLanguage from "../../context/useLanguage";
 
-const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff4d00]";
+const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
 
 export default function BlogList() {
   const { t } = useLanguage();
@@ -26,7 +26,7 @@ export default function BlogList() {
       <div className="mx-auto max-w-6xl">
         {/* Header */}
         <div className="mb-12 max-w-2xl sm:mb-16" data-aos="fade-up" data-aos-duration="700" data-aos-offset="30">
-          <h1 className="text-balance bg-linear-to-b from-zinc-950 to-zinc-600 bg-clip-text text-4xl font-semibold leading-[1.1] tracking-tight text-transparent sm:text-5xl">
+          <h1 className="text-balance text-4xl font-semibold leading-[1.1] tracking-tight text-zinc-950 after:mt-4 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand sm:text-5xl">
             {t.blog.listTitle}
           </h1>
 
@@ -55,7 +55,7 @@ export default function BlogList() {
                   />
                 </div>
 
-                <h2 className="mt-5 text-lg font-semibold leading-snug tracking-tight text-zinc-950 transition-colors group-hover:text-[#ff4d00]">
+                <h2 className="mt-5 text-lg font-semibold leading-snug tracking-tight text-zinc-950 transition-colors group-hover:text-brand">
                   {post.title}
                 </h2>
 
