@@ -1,10 +1,10 @@
 import { useState } from "react";
 import BTN from "../../components/button/BTN";
 import useLanguage from "../../context/useLanguage";
+import { whatsappNumber, whatsappUrl } from "../../lib/contact";
 
 const ACCESS_KEY = "434a21b1-bb51-4b1e-add2-f9f375b66b0a";
 
-const whatsappNumber = (import.meta.env.VITE_CONTACT_WHATSAPP || "").replace(/\D/g, "");
 const contactEmail = (import.meta.env.VITE_CONTACT_EMAIL || "").trim();
 
 const inputClasses =
@@ -106,7 +106,7 @@ export default function ContactUs() {
           {/* واتساب */}
           {whatsappNumber && (
             <a
-              href={`https://wa.me/${whatsappNumber}`}
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-start gap-4 border-b border-zinc-200 py-6 first:pt-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"

@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useContext, useEffect, useRef, useState } from "react";
 import { LangContext } from "../../context/LangContext";
 import brandLogo from "../../assets/images/1__2.png";
+import cvFile from "../../assets/images/CV.pdf";
 
 const navItems = [
   { key: "home", href: "/" },
@@ -171,8 +172,10 @@ export default function Navbar() {
             </button>
 
             {/* زر التواصل */}
-            <Link
-              to="/contact"
+            <a
+              href={cvFile}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-1 rounded-full bg-brand px-3 py-2 text-xs font-medium text-white shadow-md shadow-brand/30 transition hover:bg-brand-hover active:scale-[0.98] sm:gap-2 sm:px-4 sm:py-2.5 sm:text-sm"
             >
               {t.nav.cta}
@@ -186,7 +189,7 @@ export default function Navbar() {
               >
                 <path d="M4 10h12m-5-5 5 5-5 5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-            </Link>
+            </a>
 
             {/* زر قائمة الموبايل */}
             <button

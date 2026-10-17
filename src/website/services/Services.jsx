@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Icon from "./Icon";
 import useLanguage from "../../context/useLanguage";
 import { getCollection } from "../../lib/api";
+import { whatsappUrl } from "../../lib/contact";
 
 export default function Services() {
   const { t } = useLanguage();
@@ -113,8 +113,10 @@ export default function Services() {
             </div>
           </div>
 
-          <Link
-            to="/contact"
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex h-12 shrink-0 items-center justify-center gap-2.5 self-start rounded-full bg-brand px-6 text-sm font-semibold text-white transition hover:bg-brand-hover focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:self-center"
           >
             {t.designPartner.action}
@@ -125,7 +127,7 @@ export default function Services() {
             >
               <path d="M221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 0-16h156.69l-58.35-58.34a8 8 0 0 1 11.32-11.32l72 72a8 8 0 0 1 0 11.32Z" />
             </svg>
-          </Link>
+          </a>
         </div>
       </div>
     </section>

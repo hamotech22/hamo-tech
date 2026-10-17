@@ -3,6 +3,7 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import Icon from "./Icon";
 import useLanguage from "../../context/useLanguage";
 import { getCollection } from "../../lib/api";
+import { whatsappUrl } from "../../lib/contact";
 
 const focusRing =
   "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
@@ -92,8 +93,10 @@ export default function ServiceDetail() {
           </div>
 
           {/* زر التواصل */}
-          <Link
-            to="/contact"
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className={`group mt-8 inline-flex h-12 items-center gap-2.5 rounded-full bg-brand px-6 text-sm font-semibold text-white transition hover:bg-brand-hover ${focusRing}`}
           >
             {t.designPartner.action}
@@ -104,7 +107,7 @@ export default function ServiceDetail() {
             >
               <path d="M221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 0-16h156.69l-58.35-58.34a8 8 0 0 1 11.32-11.32l72 72a8 8 0 0 1 0 11.32Z" />
             </svg>
-          </Link>
+          </a>
         </div>
       </div>
     </article>
