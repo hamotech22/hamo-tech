@@ -1,4 +1,5 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
 import BTN from "../../components/button/BTN";
 import useLanguage from "../../context/useLanguage";
 import { whatsappNumber, whatsappUrl } from "../../lib/contact";
@@ -12,17 +13,19 @@ const inputClasses =
 
 export default function ContactUs() {
   const { t } = useLanguage();
-  const [status, setStatus] = useState("idle"); // idle | sending | success | error
+  const [sending, setSending] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setStatus("sending");
+    const form = event.target;
+    setSending(true);
 
-    const formData = new FormData(event.target);
+    const formData = new FormData(form);
     formData.append("access_key", ACCESS_KEY);
     formData.append("from_name", "hamotech");
     formData.append("subject", `طلب جديد من ${formData.get("name")} | hamotech`);
-    // formData.append("from_name", "Mohammed Yahya Portfolio");
+
+    const toastId = toast.loading(t.contact.sending);
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -32,14 +35,16 @@ export default function ContactUs() {
       const data = await response.json();
 
       if (data.success) {
-        setStatus("success");
-        event.target.reset();
+        toast.success(t.contact.success, { id: toastId });
+        form.reset();
       } else {
-        setStatus("error");
+        toast.error(t.contact.error, { id: toastId });
       }
     } catch (error) {
       console.error(t.contact.sendError, error);
-      setStatus("error");
+      toast.error(t.contact.error, { id: toastId });
+    } finally {
+      setSending(false);
     }
   };
 
@@ -86,19 +91,9 @@ export default function ContactUs() {
           />
 
           <div className="mt-2 flex flex-wrap items-center gap-4">
-            <BTN type="submit" disabled={status === "sending"}>
-              {status === "sending" ? t.contact.sending : t.contact.send}
+            <BTN type="submit" disabled={sending}>
+              {sending ? t.contact.sending : t.contact.send}
             </BTN>
-            {status === "success" && (
-              <span role="status" className="text-sm font-medium text-emerald-700">
-                {t.contact.success}
-              </span>
-            )}
-            {status === "error" && (
-              <span role="alert" className="text-sm font-medium text-red-700">
-                {t.contact.error}
-              </span>
-            )}
           </div>
         </form>
 

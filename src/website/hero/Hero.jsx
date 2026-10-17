@@ -136,10 +136,10 @@ export default function Hero() {
                     : `linear-gradient(135deg, ${tone})`,
                 }}
               >
-                <span className="hx-chip" style={{ "--cl": `${cp.l}%`, "--ct": `${cp.t}%` }}>
-                  <b><Icon /></b>
-                  <em>{label}</em>
-                  <ArrowRight />
+                <span className="hx-chip flex items-center gap-1 min-w-0 max-sm:max-w-[calc(100%-8px)] !start-[var(--cl)] max-sm:!start-[10px] rtl:![direction:rtl]" style={{ "--cl": `${cp.l}%`, "--ct": `${cp.t}%` }}>
+                  <b className="shrink-0"><Icon /></b>
+                  <em className="min-w-0 flex-1 truncate">{label}</em>
+                  <ArrowRight className="shrink-0 rtl:-scale-x-100" />
                 </span>
               </span>
             </div>
