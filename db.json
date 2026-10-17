@@ -1,192 +1,319 @@
 {
-	"clients": [],
-	"messages": [],
-	"contact": {
-		"email": "hamotech22@gmail.com",
-		"whatsappNumber": "201279368780"
-	},
-	"projects": [
-		{
-			"id": 1,
-			"title": "Dream Area",
-			"client": "Supablox",
-			"year": "2024",
-			"category": "Branding",
-			"slug": "dream-area",
-			"image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=85",
-			"images": [
-				"https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=85",
-				"https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=85",
-				"https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1200&q=85"
-			],
-			"description": "A focused visual study exploring light, texture, color, and form."
-		},
-		{
-			"id": 2,
-			"title": "Nova Scene",
-			"client": "Supablox",
-			"year": "2022",
-			"category": "Web design",
-			"slug": "nova-scene",
-			"image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85",
-			"images": [
-				"https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1200&q=85",
-				"https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1200&q=85",
-				"https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=85"
-			],
-			"description": "A focused visual study exploring light, texture, color, and form."
-		},
-		{
-			"id": 3,
-			"title": "Liquid",
-			"client": "Supablox",
-			"year": "2021",
-			"category": "Animation",
-			"slug": "liquid",
-			"image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=85",
-			"images": [
-				"https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=85",
-				"https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=85",
-				"https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=85"
-			],
-			"description": "A focused visual study exploring light, texture, color, and form."
-		},
-		{
-			"id": 4,
-			"title": "Orange Blox",
-			"client": "Supablox",
-			"year": "2023",
-			"category": "UI",
-			"slug": "orange-blox",
-			"image": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1200&q=85",
-			"images": [
-				"https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1200&q=85",
-				"https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85",
-				"https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=85"
-			],
-			"description": "A focused visual study exploring light, texture, color, and form."
-		},
-		{
-			"id": 5,
-			"title": "Arched Pink",
-			"client": "Supablox",
-			"year": "2019",
-			"category": "UX",
-			"slug": "arched-pink",
-			"image": "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1200&q=85",
-			"images": [
-				"https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1200&q=85",
-				"https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=85",
-				"https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=85"
-			],
-			"description": "A focused visual study exploring light, texture, color, and form."
-		},
-		{
-			"id": 6,
-			"title": "Fluid Shapes",
-			"client": "Supablox",
-			"year": "2020",
-			"category": "Branding",
-			"slug": "fluid-shapes",
-			"image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=85",
-			"images": [
-				"https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85",
-				"https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85",
-				"https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=85"
-			],
-			"description": "A focused visual study exploring light, texture, color, and form."
-		}
-	],
-	"gallery": [
-		{ "id": 1, "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=85", "alt": "Web developer writing code" },
-		{ "id": 2, "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=85", "alt": "Developer working on a laptop" },
-		{ "id": 3, "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=85", "alt": "Code displayed on a computer screen" },
-		{ "id": 4, "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=85", "alt": "Technology team collaborating" },
-		{ "id": 5, "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=85", "alt": "Web analytics dashboard" },
-		{ "id": 6, "image": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=800&q=85", "alt": "Web interface design on screen" },
-		{ "id": 7, "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=85", "alt": "Website design displayed on a laptop" },
-		{ "id": 8, "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=85", "alt": "Developer working at a computer" }
-	],
-
-	"blogs": [
-		{
-			"id": 1,
-			"featured": true,
-			"image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=85",
-			"title": "Building a Photography Portfolio with Presence",
-			"excerpt": "A strong photography portfolio does more than collect images. It gives your point of view a clear shape and helps the right clients understand what you see.",
-			"author": {
-				"name": "Hreka",
-				"role": "Photographer & Visual Artist",
-				"avatar": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=160&q=85"
-			},
-			"date": "Aug 14, 2024",
-			"isoDate": "2024-08-14",
-			"content": "<p>A strong photography portfolio does more than collect images. It gives your point of view a clear shape and helps the right clients understand what you see.</p><p>Choose work that feels connected by your way of seeing, not only by the subject. A clear edit makes the portfolio easier to remember and easier to trust.</p>"
-		},
-		{
-			"id": 2,
-			"image": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1200&q=85",
-			"title": "How to Prepare for a Brand Photoshoot",
-			"excerpt": "A practical guide to aligning your concept, shot list, location, and team before the camera comes out.",
-			"date": "Mar 15, 2022",
-			"isoDate": "2022-03-15",
-			"content": "<p>A successful brand photoshoot begins before the first frame. Start with a clear purpose, a focused reference board, and a shot list that supports the story.</p>"
-		},
-		{
-			"id": 3,
-			"image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=85",
-			"title": "Finding the Right Light for a Portrait",
-			"excerpt": "Explore how direction, softness, and timing can change the feeling of a portrait before you change anything else.",
-			"date": "Apr 8, 2022",
-			"isoDate": "2022-04-08",
-			"content": "<p>Great portraits begin with attention. Direction, window light, and enough time for a subject to settle can create more honesty than complicated equipment.</p>"
-		},
-		{
-			"id": 4,
-			"image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85",
-			"title": "Why Visual Consistency Matters for Brands",
-			"excerpt": "Learn how a consistent image language helps a brand feel recognizable, considered, and trustworthy.",
-			"date": "Jun 12, 2024",
-			"isoDate": "2024-06-12",
-			"content": "<p>Visual consistency helps people recognize a brand before they read a word. Repeated choices in light, color, framing, and texture build that recognition.</p>"
-		},
-		{
-			"id": 5,
-			"image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=85",
-			"title": "The Details That Make an Image Feel Real",
-			"excerpt": "A closer look at texture, gesture, imperfection, and the small decisions that give photographs their character.",
-			"date": "Jan 7, 2023",
-			"isoDate": "2023-01-07",
-			"content": "<p>The smallest details often carry the most feeling: a hand in motion, a worn surface, a pause between expressions. Look closely and let those details guide the frame.</p>"
-		}
-	],
-	"services": [],
-	"socials": [
-		{
-			"name": "Facebook",
-			"href": "https://www.facebook.com/",
-			"path": "M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"
-		},
-		{
-			"name": "Instagram",
-			"href": "https://instagram.com/frameblox",
-			"path": "M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
-		},
-		{
-			"name": "X",
-			"href": "https://x.com/frameblox",
-			"path": "M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"
-		},
-		{
-			"name": "LinkedIn",
-			"href": "https://www.linkedin.com/",
-			"path": "M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
-		},
-		{
-			"name": "YouTube",
-			"href": "https://www.youtube.com/@soltwagner",
-			"path": "M164.44,121.34l-48-32A8,8,0,0,0,104,96v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,145.05V111l25.58,17ZM234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-15.49,113a8,8,0,0,1-4.77,5.49c-31.65,12.22-85.48,12-86,12H128c-.54,0-54.33.2-86-12a8,8,0,0,1-4.77-5.49C34.8,173.39,32,156.57,32,128s2.8-45.39,5.16-54.47A8,8,0,0,1,41.93,68c30.52-11.79,81.66-12,85.85-12h.27c.54,0,54.38-.18,86,12a8,8,0,0,1,4.77,5.49C221.2,82.61,224,99.43,224,128S221.2,173.39,218.84,182.47Z"
-		}
-	]
+  "messages": [],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Car Rental Platform",
+      "category": "Car rental",
+      "slug": "car-rental-platform",
+      "image": "/src/assets/images/projects/car rental platform/1.PNG",
+      "images": [
+        "/src/assets/images/projects/car rental platform/2.PNG",
+        "/src/assets/images/projects/car rental platform/6.PNG",
+        "/src/assets/images/projects/car rental platform/8.PNG",
+        "/src/assets/images/projects/car rental platform/10.PNG",
+        "/src/assets/images/projects/car rental platform/11.PNG",
+        "/src/assets/images/projects/car rental platform/12.PNG",
+        "/src/assets/images/projects/car rental platform/14.PNG",
+        "/src/assets/images/projects/car rental platform/15.PNG",
+        "/src/assets/images/projects/car rental platform/Screenshot 2026-10-17 005423.png",
+        "/src/assets/images/projects/car rental platform/Screenshot 2026-10-17 005443.png",
+        "/src/assets/images/projects/car rental platform/Screenshot 2026-10-17 005515.png",
+        "/src/assets/images/projects/car rental platform/Screenshot 2026-10-17 005522.png",
+        "/src/assets/images/projects/car rental platform/Screenshot 2026-10-17 005537.png",
+        "/src/assets/images/projects/car rental platform/Screenshot 2026-10-17 005553.png"
+      ],
+      "description": "A web platform for browsing and managing car rentals."
+    },
+    {
+      "id": 2,
+      "title": "Guards System Website",
+      "category": "Security system",
+      "slug": "guards-system-website",
+      "image": "/src/assets/images/projects/cuards system website/1.PNG",
+      "images": [
+        "/src/assets/images/projects/cuards system website/2.PNG",
+        "/src/assets/images/projects/cuards system website/3.PNG",
+        "/src/assets/images/projects/cuards system website/4.PNG",
+        "/src/assets/images/projects/cuards system website/5.PNG",
+        "/src/assets/images/projects/cuards system website/6.PNG",
+        "/src/assets/images/projects/cuards system website/7.PNG",
+        "/src/assets/images/projects/cuards system website/8.PNG"
+      ],
+      "description": "A website for a guards and security management system."
+    },
+    {
+      "id": 3,
+      "title": "SecureVision - Security Solution",
+      "category": "Security system",
+      "slug": "securevision-security-solution",
+      "image": "/src/assets/images/projects/secureVision - security solution/1.png",
+      "images": [
+        "/src/assets/images/projects/secureVision - security solution/2.png",
+        "/src/assets/images/projects/secureVision - security solution/3.png",
+        "/src/assets/images/projects/secureVision - security solution/4.png",
+        "/src/assets/images/projects/secureVision - security solution/5.png",
+        "/src/assets/images/projects/secureVision - security solution/6.png",
+        "/src/assets/images/projects/secureVision - security solution/7.png",
+        "/src/assets/images/projects/secureVision - security solution/8.png"
+      ],
+      "description": "A website presenting SecureVision's security solution."
+    },
+    {
+      "id": 4,
+      "title": "Store",
+      "category": "E-commerce",
+      "slug": "store",
+      "image": "/src/assets/images/projects/store/1.png",
+      "images": [
+        "/src/assets/images/projects/store/2.png",
+        "/src/assets/images/projects/store/3.png",
+        "/src/assets/images/projects/store/4.png",
+        "/src/assets/images/projects/store/5.png",
+        "/src/assets/images/projects/store/6.png",
+        "/src/assets/images/projects/store/7.png"
+      ],
+      "description": "An online store website."
+    }
+  ],
+  "gallery": [
+    {
+      "id": 1,
+      "title": "تطوير مواقع الويب",
+      "image": "/src/assets/images/gallery/1.jpg",
+      "alt": "Web developer writing code"
+    },
+    {
+      "id": 2,
+      "title": "تصميم واجهات المستخدم",
+      "image": "/src/assets/images/gallery/2.jpg",
+      "alt": "Developer working on a laptop"
+    },
+    {
+      "id": 3,
+      "title": "متاجر إلكترونية",
+      "image": "/src/assets/images/gallery/3.jpg",
+      "alt": "Code displayed on a computer screen"
+    },
+    {
+      "id": 4,
+      "title": "تطوير الأنظمة والـBackend",
+      "image": "/src/assets/images/gallery/4.png",
+      "alt": "Technology team collaborating"
+    },
+    {
+      "id": 5,
+      "title": "تطوير مواقع ووردبريس",
+      "image": "/src/assets/images/gallery/5.jpg",
+      "alt": "Web analytics dashboard"
+    },
+    {
+      "id": 6,
+      "title": "تطبيقات ويب متكاملة ولوحات تحكم",
+      "image": "/src/assets/images/gallery/6.png",
+      "alt": "Web interface design on screen"
+    },
+    {
+      "id": 7,
+      "title": "تحسين المواقع وتجربة المستخدم",
+      "image": "/src/assets/images/gallery/7.webp",
+      "alt": "Website design displayed on a laptop"
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=85",
+      "title": "Building a Photography Portfolio with Presence",
+      "excerpt": "A strong photography portfolio does more than collect images. It gives your point of view a clear shape and helps the right clients understand what you see.",
+      "author": {
+        "name": "Mohammed Yahya",
+        "role": "Photographer & Visual Artist",
+        "avatar": "../../assets/images/profile.jpeg"
+      },
+      "date": "Aug 14, 2025",
+      "isoDate": "2025-08-14",
+      "content": "<p>A strong photography portfolio does more than collect images. It gives your point of view a clear shape and helps the right clients understand what you see.</p><p>Choose work that feels connected by your way of seeing, not only by the subject. A clear edit makes the portfolio easier to remember and easier to trust.</p>"
+    },
+    {
+      "id": 2,
+      "image": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1200&q=85",
+      "title": "How to Prepare for a Brand Photoshoot",
+      "excerpt": "A practical guide to aligning your concept, shot list, location, and team before the camera comes out.",
+      "date": "Mar 15, 2022",
+      "isoDate": "2022-03-15",
+      "content": "<p>A successful brand photoshoot begins before the first frame. Start with a clear purpose, a focused reference board, and a shot list that supports the story.</p>"
+    },
+    {
+      "id": 3,
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=85",
+      "title": "Finding the Right Light for a Portrait",
+      "excerpt": "Explore how direction, softness, and timing can change the feeling of a portrait before you change anything else.",
+      "date": "Apr 8, 2022",
+      "isoDate": "2022-04-08",
+      "content": "<p>Great portraits begin with attention. Direction, window light, and enough time for a subject to settle can create more honesty than complicated equipment.</p>"
+    },
+    {
+      "id": 4,
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85",
+      "title": "Why Visual Consistency Matters for Brands",
+      "excerpt": "Learn how a consistent image language helps a brand feel recognizable, considered, and trustworthy.",
+      "date": "Jun 12, 2024",
+      "isoDate": "2024-06-12",
+      "content": "<p>Visual consistency helps people recognize a brand before they read a word. Repeated choices in light, color, framing, and texture build that recognition.</p>"
+    },
+    {
+      "id": 5,
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=85",
+      "title": "The Details That Make an Image Feel Real",
+      "excerpt": "A closer look at texture, gesture, imperfection, and the small decisions that give photographs their character.",
+      "date": "Jan 7, 2023",
+      "isoDate": "2023-01-07",
+      "content": "<p>The smallest details often carry the most feeling: a hand in motion, a worn surface, a pause between expressions. Look closely and let those details guide the frame.</p>"
+    },
+    {
+      "id": 6,
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=85",
+      "title": "The Details That Make an Image Feel Real",
+      "excerpt": "A closer look at texture, gesture, imperfection, and the small decisions that give photographs their character.",
+      "date": "Jan 7, 2023",
+      "isoDate": "2023-01-07",
+      "content": "<p>The smallest details often carry the most feeling: a hand in motion, a worn surface, a pause between expressions. Look closely and let those details guide the frame.</p>"
+    },
+    {
+      "id": 7,
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=85",
+      "title": "The Details That Make an Image Feel Real",
+      "excerpt": "A closer look at texture, gesture, imperfection, and the small decisions that give photographs their character.",
+      "date": "Jan 7, 2023",
+      "isoDate": "2023-01-07",
+      "content": "<p>The smallest details often carry the most feeling: a hand in motion, a worn surface, a pause between expressions. Look closely and let those details guide the frame.</p>"
+    }
+  ],
+  "socials": [
+    {
+      "name": "Facebook",
+      "href": "https://www.facebook.com/",
+      "path": "M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"
+    },
+    {
+      "name": "Instagram",
+      "href": "https://instagram.com/frameblox",
+      "path": "M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
+    },
+    {
+      "name": "X",
+      "href": "https://x.com/frameblox",
+      "path": "M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"
+    },
+    {
+      "name": "LinkedIn",
+      "href": "https://www.linkedin.com/",
+      "path": "M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
+    },
+    {
+      "name": "YouTube",
+      "href": "https://www.youtube.com/@soltwagner",
+      "path": "M164.44,121.34l-48-32A8,8,0,0,0,104,96v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,145.05V111l25.58,17ZM234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-15.49,113a8,8,0,0,1-4.77,5.49c-31.65,12.22-85.48,12-86,12H128c-.54,0-54.33.2-86-12a8,8,0,0,1-4.77-5.49C34.8,173.39,32,156.57,32,128s2.8-45.39,5.16-54.47A8,8,0,0,1,41.93,68c30.52-11.79,81.66-12,85.85-12h.27c.54,0,54.38-.18,86,12a8,8,0,0,1,4.77,5.49C221.2,82.61,224,99.43,224,128S221.2,173.39,218.84,182.47Z"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "slug": "brand-design",
+      "title": "Brand Design",
+      "description": "Build a cohesive and memorable identity that sets your business apart. From logos to brand guidelines, we craft visuals that communicate your values and resonate with your audience.",
+      "details": "We start by understanding your audience and values, then design a logo, color system, and guidelines you can use consistently everywhere.",
+      "skills": [
+        "Logo design",
+        "Brand guidelines",
+        "Visual identity"
+      ],
+      "iconPaths": [
+        "M12 2.5 19 6v6c0 4.5-2.8 8.5-7 10.5C7.8 20.5 5 16.5 5 12V6l7-3.5Z",
+        "M9.5 9.5h5M9.5 12.5h5M9.5 15.5h3"
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "product-design",
+      "title": "Product Design",
+      "description": "Transform your ideas into user-centric digital products. We design intuitive interfaces and experiences that make your apps, tools, or platforms both functional and delightful to use.",
+      "details": "We turn your idea into clear screens and flows, test them with real users, and hand over a polished design that is ready to build.",
+      "skills": [
+        "UI design",
+        "Prototyping",
+        "Design systems"
+      ],
+      "iconPaths": [
+        "M4 6.5A1.5 1.5 0 0 1 5.5 5h13A1.5 1.5 0 0 1 20 6.5v11A1.5 1.5 0 0 1 18.5 19h-13A1.5 1.5 0 0 1 4 17.5v-11Z",
+        "M4 9.5h16M9 19v-9.5h6V19"
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "ux-design-strategy",
+      "title": "UX Design & Strategy",
+      "description": "Deliver experiences that truly connect with your users. Our UX strategy process focuses on research, user behavior analysis, and design thinking to create seamless, impactful journeys.",
+      "details": "We study how your users think and behave, find the friction in their journey, and shape a strategy that makes every step simple.",
+      "skills": [
+        "User research",
+        "Journey mapping",
+        "Usability testing"
+      ],
+      "iconPaths": [
+        "M16 20v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2",
+        "M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z",
+        "M20 20v-2a4 4 0 0 0-3-3.87M16 4.5a4 4 0 0 1 0 7.5"
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "development",
+      "title": "Development",
+      "description": "Bring your vision to life with robust and scalable solutions. Our development team ensures your website or product runs smoothly with clean code, advanced technology, and future-proof frameworks.",
+      "details": "We build fast, responsive, and secure websites and web apps with clean code that is easy to maintain and ready to grow with you.",
+      "skills": [
+        "React",
+        "APIs",
+        "Responsive websites"
+      ],
+      "iconPaths": [
+        "M8 8 4 12l4 4M16 8l4 4-4 4M13 5l-2 14"
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "maintenance-support",
+      "title": "Maintenance & Support",
+      "description": "Keep your product healthy after launch. We fix issues quickly, keep everything up to date, and make sure your website keeps working the way your visitors expect.",
+      "details": "After launch we stay close: monitoring, regular updates, and quick fixes so small problems never turn into big ones.",
+      "skills": [
+        "Bug fixes",
+        "Updates",
+        "Monitoring"
+      ],
+      "iconPaths": [
+        "M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18l3 3 5.3-5.3a5 5 0 0 0 6.4-6.4L14 13l-3-3 3.7-3.7Z"
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "performance-optimization",
+      "title": "Performance & Optimization",
+      "description": "Make your website faster and easier to find. We improve loading speed, search visibility, and accessibility so more people can enjoy your site.",
+      "details": "We measure what slows your site down, fix it step by step, and improve search visibility so the right people find you.",
+      "skills": [
+        "Speed",
+        "SEO",
+        "Accessibility"
+      ],
+      "iconPaths": [
+        "M3.5 17.5a9 9 0 1 1 17 0",
+        "M12 13l4-4",
+        "M12 13h.01"
+      ]
+    }
+  ]
 }

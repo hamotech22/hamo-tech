@@ -1,8 +1,8 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useLanguage from "../../context/useLanguage";
 import brandLogo from "../../assets/images/1__2.png";
+import { getCollection } from "../../lib/api";
 
 const navLinks = [
   { key: "home", href: "/" },
@@ -19,16 +19,14 @@ const legalLinks = [
 ];
 
 const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand";
-const API_URL = "http://localhost:3000/socials";
 
 export default function Footer() {
   const { t } = useLanguage();
   const [socials, setSocial] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(API_URL)
-      .then((res) => setSocial(res.data))
+    getCollection("/socials")
+      .then(setSocial)
       .catch((error) => console.error("Failed to load socials links:", error));
   }, []);
 
@@ -37,14 +35,6 @@ export default function Footer() {
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-px bg-[linear-gradient(90deg,transparent,#38bdf8_35%,#7dd3fc_65%,transparent)] opacity-70"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -start-32 -top-40 -z-10 size-96 rounded-full bg-brand/20 blur-[100px]"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -end-32 top-0 -z-10 size-80 rounded-full bg-sky-400/10 blur-[100px]"
       />
       <div
         aria-hidden="true"

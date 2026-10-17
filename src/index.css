@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -6,6 +6,21 @@
 	--color-brand-hover: #0284c7;
 	--color-brand-glow: #38bdf8;
 	--color-brand-light: #7dd3fc;
+	--color-brand-accent: #fbbf24;
+	--color-brand-accent-hover: #f59e0b;
+	--text-xs: clamp(0.6875rem, 0.65rem + 0.18vw, 0.75rem);
+	--text-sm: clamp(0.8125rem, 0.77rem + 0.2vw, 0.875rem);
+	--text-base: clamp(0.9rem, 0.84rem + 0.3vw, 1rem);
+	--text-lg: clamp(1rem, 0.92rem + 0.4vw, 1.125rem);
+	--text-xl: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+	--text-2xl: clamp(1.25rem, 1rem + 1.25vw, 1.5rem);
+	--text-3xl: clamp(1.5rem, 1.1rem + 2vw, 1.875rem);
+	--text-4xl: clamp(1.75rem, 1rem + 3.75vw, 2.25rem);
+	--text-5xl: clamp(2rem, 1rem + 5vw, 3rem);
+	--text-6xl: clamp(2.25rem, 1rem + 6.25vw, 3.75rem);
+	--text-7xl: clamp(3rem, 1.5rem + 7.5vw, 4.5rem);
+	--text-8xl: clamp(3.5rem, 1rem + 12.5vw, 6rem);
+	--text-9xl: clamp(4rem, 1rem + 15vw, 8rem);
 }
 
 html {
@@ -13,11 +28,357 @@ html {
 }
 
 body {
-	font-family: "Space Grotesk", sans-serif;
+	font-family: "Inter", sans-serif;
+}
+
+html[lang="ar"] body {
+	font-family: "Cairo", sans-serif;
 }
 
 @layer base {
 	button:not(:disabled) {
 		cursor: pointer;
 	}
+}
+
+
+
+
+/* ===== Hero styles: layout, typography, collage, and responsive rules ===== */
+.hx {
+	--card: #fff;
+	--ink: #0f172a;
+	--muted: #64748b;
+	--blue: var(--color-brand);
+	--blue-2: var(--color-brand-hover);
+	--line: #e0f2fe;
+	box-sizing: border-box;
+	min-height: 100vh;
+	overflow: hidden;
+	padding: 16px clamp(16px, 10vw, 150px) 64px;
+	background: transparent;
+	color: var(--ink);
+	font-family: inherit;
+}
+
+.hx[data-theme="dark"] {
+	--card: #111a33;
+	--ink: #f1f5f9;
+	--muted: #94a3b8;
+	--line: #1e2a4a;
+	background: transparent;
+}
+
+.hx *,
+.hx *::before,
+.hx *::after {
+	box-sizing: inherit;
+}
+
+.hx a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.hx-defs {
+	position: absolute;
+}
+
+.hx-nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 12px 28px;
+	border-radius: 24px;
+	background: var(--card);
+	box-shadow: 0 8px 30px rgb(37 99 235 / 7%);
+}
+
+.hx-logo {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	direction: ltr;
+	font-size: 22px;
+	font-weight: 800;
+}
+
+.hx-links {
+	display: flex;
+	gap: 38px;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.hx-links a {
+	padding: 6px 0;
+	border-bottom: 2px solid transparent;
+}
+
+.hx-links a.active {
+	border-color: var(--blue);
+	color: var(--blue);
+}
+
+.hx-actions {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+}
+
+.hx-theme {
+	display: grid;
+	width: 44px;
+	height: 44px;
+	place-items: center;
+	border: 0;
+	border-radius: 50%;
+	background: var(--line);
+	color: var(--blue);
+	cursor: pointer;
+}
+
+.hx-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	padding: 14px 32px;
+	border-radius: 999px;
+	background: var(--blue);
+	box-shadow: 0 10px 24px rgb(3 105 161 / 30%);
+	color: #fff !important;
+	font-size: 15px;
+	font-weight: 700;
+	transition: transform 0.2s, background 0.2s;
+}
+
+.hx-btn:hover {
+	transform: translateY(-2px);
+	background: var(--blue-2);
+}
+
+.hx-btn-sm {
+	padding: 11px 22px;
+	box-shadow: none;
+	font-size: 14px;
+}
+
+.hx a:focus-visible,
+.hx button:focus-visible {
+	outline: 3px solid var(--color-brand-light);
+	outline-offset: 3px;
+}
+
+.hx-text {
+	position: relative;
+	max-width: 1240px;
+	margin: 30px auto 0;
+	text-align: center;
+}
+
+.hx-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	padding: 7px 20px;
+	border: 1px solid var(--line);
+	border-radius: 999px;
+	background: var(--card);
+	color: var(--blue);
+	font-size: 13px;
+}
+
+.hx-badge i {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #10b981;
+}
+
+.hx-text h1 {
+	display: flex;
+	flex-direction: column;
+	margin: 10px 0 16px;
+	font-size: clamp(30px, 4vw, 52px);
+	font-weight: 800;
+	line-height: 1.15;
+}
+
+.hx-text h1 .blue {
+	color: var(--blue);
+}
+
+.hx-text p {
+	max-width: 540px;
+	margin: 0 auto 26px;
+	color: var(--muted);
+	font-size: clamp(14px, 1.4vw, 17px);
+	line-height: 1.9;
+}
+
+.hx-hint {
+	position: absolute;
+	top: 215px;
+	right: 12px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	transform: rotate(-6deg);
+	color: var(--blue);
+	font-size: 15px;
+	line-height: 1.35;
+	text-align: right;
+}
+
+.hx-hint svg {
+	margin-top: 2px;
+	margin-right: 8px;
+}
+
+.hx-collage {
+	position: relative;
+	max-width: 1240px;
+	margin: 34px auto 0;
+	aspect-ratio: 1240 / 530;
+	container-type: inline-size;
+}
+
+.hx-tile {
+	position: absolute;
+	top: var(--t);
+	left: var(--l);
+	display: block;
+	width: var(--w);
+	height: var(--h);
+	cursor: pointer;
+	filter: drop-shadow(0 12px 22px rgb(3 105 161 / 22%));
+	transition: filter 220ms ease, transform 220ms ease;
+	transform-origin: center;
+}
+
+.hx-tile:hover {
+	z-index: 1;
+	transform: translateY(-5px) scale(1.015);
+	filter: drop-shadow(0 18px 28px rgb(3 105 161 / 38%));
+}
+
+.hx-fill {
+	position: absolute;
+	inset: 0;
+	display: block;
+	clip-path: var(--clip);
+	background-position: center;
+	background-size: cover, cover;
+}
+
+.hx-chip {
+	position: absolute;
+	top: var(--ct);
+	left: var(--cl);
+	display: inline-flex;
+	align-items: center;
+	gap: 0.6em;
+	transform: translateY(-50%);
+	border-radius: 999px;
+	padding: 0.35em 0.95em 0.35em 0.35em;
+	backdrop-filter: blur(8px);
+	background: rgb(10 20 52 / 78%);
+	color: #fff;
+	direction: ltr;
+	font-size: clamp(10px, 1.15cqw, 15px);
+	font-weight: 500;
+	white-space: nowrap;
+}
+
+.hx-chip b {
+	display: grid;
+	width: 2.9em;
+	height: 2.9em;
+	flex: none;
+	place-items: center;
+	border-radius: 50%;
+	background: rgb(255 255 255 / 12%);
+}
+
+.hx-chip b svg {
+	width: 52%;
+	height: 52%;
+}
+
+.hx-chip > svg {
+	width: 1.15em;
+	height: 1.15em;
+	flex: none;
+}
+
+.hx-chip em {
+	font-style: normal;
+}
+
+@media (max-width: 960px) {
+	.hx-links,
+	.hx-hint,
+	.hide-sm {
+		display: none;
+	}
+
+	.hx-collage {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 12px;
+		aspect-ratio: auto;
+	}
+
+	.hx-tile {
+		position: relative;
+		top: auto;
+		left: auto;
+		width: auto;
+		height: 150px;
+		filter: none;
+	}
+
+	.hx-tile[data-id="ui"] {
+		grid-column: 1 / -1;
+		height: 200px;
+	}
+
+	.hx-fill {
+		clip-path: none;
+		border-radius: 20px;
+	}
+
+	.hx-chip {
+		top: auto;
+		bottom: 10px;
+		left: 10px;
+		transform: none;
+		font-size: 12px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.hx * {
+		transition: none !important;
+	}
+}
+/* ===== End Hero styles ===== */
+
+html body h1 {
+	font-size: clamp(1.75rem, 1.2rem + 2vw, 2.75rem);
+}
+
+html body h2 {
+	font-size: clamp(1.375rem, 1.1rem + 1.2vw, 2rem);
+}
+
+html body h3 {
+	font-size: clamp(1.125rem, 1rem + 0.7vw, 1.5rem);
+}
+
+html body h4,
+html body h5,
+html body h6 {
+	font-size: clamp(1rem, 0.95rem + 0.35vw, 1.25rem);
 }
