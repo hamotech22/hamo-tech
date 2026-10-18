@@ -72,7 +72,7 @@ export default function Footer() {
                 aria-label={social.name}
                 className={`grid size-11 place-items-center rounded-full border border-white/10 text-zinc-400 transition duration-200 hover:-translate-y-0.5 hover:border-brand hover:bg-brand hover:text-white ${focusRing}`}
               >
-                <svg viewBox="0 0 256 256" aria-hidden="true" className="size-5 fill-current">
+                <svg viewBox={social.viewBox ?? "0 0 256 256"} aria-hidden="true" className="size-5 fill-current">
                   <path d={social.path} />
                 </svg>
               </a>
