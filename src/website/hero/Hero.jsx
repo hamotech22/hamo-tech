@@ -66,6 +66,8 @@ const TILES = RAW.map((t) => {
 export default function Hero() {
   const { lang, t } = useLanguage();
   const [gallery, setGallery] = useState([]);
+  const [typingProgress, setTypingProgress] = useState({ text: t.hero.badge, length: 0 });
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   useEffect(() => {
     getCollection("/gallery")
@@ -74,6 +76,36 @@ export default function Hero() {
         console.error("Failed to load hero gallery:", error);
       });
   }, []);
+
+  useEffect(() => {
+    const badgeText = t.hero.badge;
+    if (reduceMotion) return;
+
+    let characterIndex = 0;
+    let direction = 1;
+    let pauseTicks = 0;
+    const typingTimer = window.setInterval(() => {
+      if (direction === 1 && characterIndex === badgeText.length) {
+        pauseTicks += 1;
+        if (pauseTicks >= 18) direction = -1;
+        return;
+      }
+
+      characterIndex += direction;
+      setTypingProgress({ text: badgeText, length: characterIndex });
+
+      if (characterIndex === 0) {
+        direction = 1;
+        pauseTicks = 0;
+      }
+    }, 65);
+
+    return () => window.clearInterval(typingTimer);
+  }, [reduceMotion, t.hero.badge]);
+
+  const typedBadge = reduceMotion
+    ? t.hero.badge
+    : t.hero.badge.slice(0, typingProgress.text === t.hero.badge ? typingProgress.length : 0);
 
   return (
     <div className="hx" data-theme="light" dir={lang === "ar" ? "rtl" : "ltr"}>
@@ -92,7 +124,12 @@ export default function Hero() {
 
       {/* ===== Text ===== */}
       <section className="hx-text">
-        <span className="hx-badge"><i /> {t.hero.badge}</span>
+        <span className="hx-badge" aria-label={t.hero.badge}>
+          <i />
+          <span className="hx-badge-label" data-text={t.hero.badge} aria-hidden="true">
+            <span className="hx-badge-typing">{typedBadge}<span className="hx-typing-cursor" /></span>
+          </span>
+        </span>
         <h1>
           <span className="blue">{t.hero.title1}</span>
           <span>{t.hero.title2}</span>
