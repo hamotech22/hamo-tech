@@ -105,7 +105,7 @@ export default function Navbar() {
         <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-3 sm:h-16 sm:px-5">
           {/* اللوجو */}
           <Link to="/" aria-label="Hamo-Tech home" className={`rounded-lg ${focusRing}`}>
-            <img src={brandLogo} alt="Hamo-Tech" className="h-10 w-36 rounded-lg object-cover sm:h-12 sm:w-48" />
+            <img src={brandLogo} alt="Hamo-Tech" className="h-11 w-40 rounded-lg object-cover sm:h-13 sm:w-52" />
           </Link>
 
           {/* ===== الروابط (شاشات كبيرة) ===== */}
