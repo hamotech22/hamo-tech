@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useContext, useEffect, useRef, useState } from "react";
 import { LangContext } from "../../context/LangContext";
-import brandLogo from "../../assets/images/1__2.png";
+import brandLogo from "../../assets/images/Hamo-Tech_Navbar_Logo.png";
 import cvFile from "../../assets/images/CV.pdf";
 
 const navItems = [
@@ -18,17 +18,16 @@ const serviceLinks = [
   { key: "servicePolicy", href: "/service-policy" },
 ];
 
-// الخلفية الغامقة (بنستخدمها في الشريط والقوائم)
-const panel =
-  "border border-white/10 bg-[linear-gradient(110deg,#071522_0%,#102436_55%,#111b2b_100%)] shadow-xl shadow-slate-950/25 backdrop-blur-2xl";
+// الخلفية البيضا (ثابتة في كل الحالات)
+const panel = "border border-slate-200 bg-white shadow-sm";
 
 const focusRing =
   "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand";
 
 // شكل الرابط: بيتلوّن لو هو الصفحة الحالية
 const linkClass = (isActive, shape) =>
-  `${shape} px-3 py-2 text-sm font-medium transition hover:bg-white/10 hover:text-white ${focusRing} ${
-    isActive ? "bg-white/10 text-white" : "text-zinc-300"
+  `${shape} px-3 py-2 text-sm font-medium underline-offset-8 transition hover:text-slate-900 ${focusRing} ${
+    isActive ? "text-slate-900 underline decoration-brand decoration-2" : "text-slate-600 no-underline"
   }`;
 
 // سهم صغير بيتقلب لما القائمة تتفتح
@@ -52,6 +51,7 @@ export default function Navbar() {
 
   const [menuOpen, setMenuOpen] = useState(false); // قائمة الموبايل
   const [servicesOpen, setServicesOpen] = useState(false); // قائمة الخدمات
+  const [scrolled, setScrolled] = useState(false); // الظل ظاهر ولا لأ
 
   // useRef: عشان نعرف لو المستخدم دوس برا الـ Navbar
   const headerRef = useRef(null);
@@ -80,24 +80,29 @@ export default function Navbar() {
     };
   }, []);
 
+  // إظهار الظل تحت النافبار بعد السكرول
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20); // غيّر الرقم حسب ما تحب
+
+    handleScroll(); // عشان لو عملت ريفريش وانت في نص الصفحة
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const closeAll = () => {
     setMenuOpen(false);
     setServicesOpen(false);
   };
 
   return (
-    <header ref={headerRef} className="sticky top-0 z-50 px-3 pt-2 sm:px-5 sm:pt-3">
-      <div className="relative mx-auto max-w-7xl">
-        {/* توهج خفيف حوالين الشريط */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -inset-x-3 -inset-y-2 -z-10 rounded-full bg-[linear-gradient(100deg,transparent_12%,#38bdf8_50%,#7dd3fc_88%,transparent)] opacity-20 blur-xl"
-        />
-
-        <nav
-          aria-label={t.nav.mainLabel}
-          className={`flex h-14 items-center justify-between rounded-full ps-3 pe-2 sm:h-16 sm:ps-5 sm:pe-3 ${panel}`}
-        >
+    <header ref={headerRef} className="sticky top-0 z-[100]">
+      <nav
+        aria-label={t.nav.mainLabel}
+        className={`bg-white transition-shadow duration-300 ${
+          scrolled ? "shadow-md shadow-slate-900/10" : "shadow-none"
+        }`}
+      >
+        <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-3 sm:h-16 sm:px-5">
           {/* اللوجو */}
           <Link to="/" aria-label="Hamo-Tech home" className={`rounded-lg ${focusRing}`}>
             <img src={brandLogo} alt="Hamo-Tech" className="h-10 w-36 rounded-lg object-cover sm:h-12 sm:w-48" />
@@ -154,7 +159,7 @@ export default function Navbar() {
               dir="ltr"
               onClick={() => setLang(lang === "en" ? "ar" : "en")}
               aria-label={t.nav.changeLanguage}
-              className={`relative grid h-8 w-18 grid-cols-2 items-center rounded-full border border-white/10 bg-white/5 p-1 text-xs font-semibold sm:h-9 sm:w-20 ${focusRing}`}
+              className={`relative grid h-8 w-18 grid-cols-2 items-center rounded-full border border-slate-200 bg-slate-100 p-1 text-xs font-semibold sm:h-9 sm:w-20 ${focusRing}`}
             >
               {/* الدايرة المتحركة */}
               <span
@@ -163,10 +168,10 @@ export default function Navbar() {
                   lang === "ar" ? "translate-x-full" : ""
                 }`}
               />
-              <span className={`relative z-10 text-center transition-colors duration-300 ${lang === "en" ? "text-white" : "text-zinc-400"}`}>
+              <span className={`relative z-10 text-center transition-colors duration-300 ${lang === "en" ? "text-white" : "text-slate-500"}`}>
                 EN
               </span>
-              <span className={`relative z-10 text-center transition-colors duration-300 ${lang === "ar" ? "text-white" : "text-zinc-400"}`}>
+              <span className={`relative z-10 text-center transition-colors duration-300 ${lang === "ar" ? "text-white" : "text-slate-500"}`}>
                 AR
               </span>
             </button>
@@ -197,7 +202,7 @@ export default function Navbar() {
               aria-label={menuOpen ? t.nav.closeMenu : t.nav.openMenu}
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen(!menuOpen)}
-              className="grid size-10 place-items-center rounded-full text-zinc-200 transition hover:bg-white/10 sm:size-11 lg:hidden"
+              className="grid size-10 place-items-center rounded-full text-slate-700 transition hover:bg-slate-900/5 sm:size-11 lg:hidden"
             >
               <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true" className="size-5 sm:size-6">
                 {menuOpen ? (
@@ -208,54 +213,54 @@ export default function Navbar() {
               </svg>
             </button>
           </div>
-        </nav>
+        </div>
+      </nav>
 
-        {/* ===== قائمة الموبايل ===== */}
-        {menuOpen && (
-          <div className={`absolute inset-x-0 top-full mt-2 rounded-3xl p-2 lg:hidden ${panel}`}>
-            {navItems.map((item) =>
-              item.key === "services" ? (
-                <div key={item.key}>
-                  <button
-                    type="button"
-                    aria-expanded={servicesOpen}
-                    onClick={() => setServicesOpen(!servicesOpen)}
-                    className={`${linkClass(false, "rounded-xl")} flex w-full items-center justify-between text-start`}
-                  >
-                    {t.nav.services}
-                    <Chevron open={servicesOpen} />
-                  </button>
-
-                  {servicesOpen && (
-                    <div className="ms-3 border-s border-white/10 ps-2">
-                      {serviceLinks.map((link) => (
-                        <NavLink
-                          key={link.key}
-                          to={link.href}
-                          onClick={closeAll}
-                          className={({ isActive }) => `block ${linkClass(isActive, "rounded-xl")}`}
-                        >
-                          {t.nav[link.key]}
-                        </NavLink>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <NavLink
-                  key={item.key}
-                  to={item.href}
-                  end={item.href === "/"}
-                  onClick={closeAll}
-                  className={({ isActive }) => `block ${linkClass(isActive, "rounded-xl")}`}
+      {/* ===== قائمة الموبايل (بعرض الشاشة) ===== */}
+      {menuOpen && (
+        <div className={`${panel} absolute inset-x-0 top-full rounded-b-3xl border-x-0 p-2 lg:hidden`}>
+          {navItems.map((item) =>
+            item.key === "services" ? (
+              <div key={item.key}>
+                <button
+                  type="button"
+                  aria-expanded={servicesOpen}
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  className={`${linkClass(false, "rounded-xl")} flex w-full items-center justify-between text-start`}
                 >
-                  {t.nav[item.key]}
-                </NavLink>
-              ),
-            )}
-          </div>
-        )}
-      </div>
+                  {t.nav.services}
+                  <Chevron open={servicesOpen} />
+                </button>
+
+                {servicesOpen && (
+                  <div className="ms-3 border-s border-slate-200 ps-2">
+                    {serviceLinks.map((link) => (
+                      <NavLink
+                        key={link.key}
+                        to={link.href}
+                        onClick={closeAll}
+                        className={({ isActive }) => `block ${linkClass(isActive, "rounded-xl")}`}
+                      >
+                        {t.nav[link.key]}
+                      </NavLink>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <NavLink
+                key={item.key}
+                to={item.href}
+                end={item.href === "/"}
+                onClick={closeAll}
+                className={({ isActive }) => `block ${linkClass(isActive, "rounded-xl")}`}
+              >
+                {t.nav[item.key]}
+              </NavLink>
+            ),
+          )}
+        </div>
+      )}
     </header>
   );
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useLanguage from "../../context/useLanguage";
-import brandLogo from "../../assets/images/1__2.png";
+import brandLogo from "../../assets/images/Hamo-Tech_Footer_Logo.png";
 import { getCollection } from "../../lib/api";
 
 const navLinks = [

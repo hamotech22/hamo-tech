@@ -46,6 +46,8 @@ export default function ProjectDetail() {
 
   // مشروعين تانيين
   const related = projects.filter((p) => p.id !== project.id).slice(0, 2);
+  const projectTitle = t.projects.titles?.[project.id] ?? project.title;
+  const projectDetails = t.projects.details?.[project.id];
 
   // الصورة الرئيسية + باقي الصور (بدون تكرار، 8 كحد أقصى)
   const gallery = [...new Set([project.image, ...(project.images ?? [])].filter(Boolean))]
@@ -74,7 +76,7 @@ export default function ProjectDetail() {
             >
               <img
                 src={gallery[current]}
-                alt={project.title}
+                alt={projectTitle}
                 className="size-full object-contain"
               />
             </div>
@@ -87,7 +89,7 @@ export default function ProjectDetail() {
                     key={src}
                     type="button"
                     onClick={() => setActiveIndex(index)}
-                    aria-label={`${project.title} ${index + 1}`}
+                    aria-label={`${projectTitle} ${index + 1}`}
                     aria-pressed={index === current}
                     className={`aspect-[4/3] overflow-hidden rounded-2xl bg-zinc-100 transition duration-300 ${focusRing} ${
                       index === current
@@ -109,7 +111,7 @@ export default function ProjectDetail() {
             </span>
 
             <h1 className="mt-4 text-balance text-3xl font-semibold leading-tight tracking-tight text-zinc-950 after:mt-4 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand-accent sm:text-4xl">
-              {project.title}
+              {projectTitle}
             </h1>
 
             {(project.client || project.year) && (
@@ -123,6 +125,81 @@ export default function ProjectDetail() {
             <p className="mt-6 border-t border-zinc-200 pt-6 text-pretty text-base leading-7 text-zinc-600">
               {t.projects.descriptions[project.id] ?? project.description}
             </p>
+
+            {projectDetails && (
+              <div className="mt-6 space-y-6 border-t border-zinc-200 pt-6">
+                {projectDetails.components && (
+                  <section>
+                    <h2 className="text-sm font-semibold text-zinc-950">{t.projects.componentsTitle}</h2>
+                    <ul className="mt-3 space-y-2 text-sm leading-6 text-zinc-600">
+                      {projectDetails.components.map((component) => (
+                        <li key={component} className="flex gap-2">
+                          <span aria-hidden="true" className="text-brand">•</span>
+                          <span>{component}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {projectDetails.features && (
+                  <section>
+                    <h2 className="text-sm font-semibold text-zinc-950">
+                      {projectDetails.components ? t.projects.projectBenefitsTitle : t.projects.featuresTitle}
+                    </h2>
+                    <ul className="mt-3 space-y-2 text-sm leading-6 text-zinc-600">
+                      {projectDetails.features.map((feature) => (
+                        <li key={feature} className="flex gap-2">
+                          <span aria-hidden="true" className="text-brand">•</span>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {projectDetails.services && (
+                  <section>
+                    <h2 className="text-sm font-semibold text-zinc-950">{t.projects.servicesTitle}</h2>
+                    <ul className="mt-3 space-y-4 text-sm leading-6 text-zinc-600">
+                      {projectDetails.services.map((service) => (
+                        <li key={service.title}>
+                          <h3 className="font-medium text-zinc-800">{service.title}</h3>
+                          <p>{service.description}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {projectDetails.bookingSteps && (
+                  <section>
+                    <h2 className="text-sm font-semibold text-zinc-950">{t.projects.bookingStepsTitle}</h2>
+                    <ol className="mt-3 list-inside list-decimal space-y-2 text-sm leading-6 text-zinc-600">
+                      {projectDetails.bookingSteps.map((step) => (
+                        <li key={step}>{step}</li>
+                      ))}
+                    </ol>
+                  </section>
+                )}
+
+                {projectDetails.technologies && (
+                  <section>
+                    <h2 className="text-sm font-semibold text-zinc-950">{t.projects.technologiesTitle}</h2>
+                    <ul className="mt-3 flex flex-wrap gap-2">
+                      {projectDetails.technologies.map((technology) => (
+                        <li
+                          key={technology}
+                          className="rounded-full bg-zinc-100 px-3 py-1.5 text-xs font-medium text-zinc-700"
+                        >
+                          {technology}
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+              </div>
+            )}
           </aside>
         </div>
 

@@ -9,6 +9,7 @@ const focusRing =
 export default function ProjectCard({ project, big = false }) {
   const { t } = useLanguage();
 
+  const title = t.projects.titles?.[project.id] ?? project.title;
   const category = t.projects.categories[project.category] ?? project.category;
   const description = t.projects.descriptions[project.id] ?? project.description;
 
@@ -27,7 +28,7 @@ export default function ProjectCard({ project, big = false }) {
       >
         <img
           src={resolveProjectImage(project.image)}
-          alt={project.title}
+          alt={title}
           loading="lazy"
           className="size-full object-contain"
         />
@@ -61,7 +62,7 @@ export default function ProjectCard({ project, big = false }) {
       {/* النصوص */}
       <div className="px-3 pb-3 pt-5">
         <h3 className="text-xl font-semibold tracking-tight text-zinc-950 transition-colors group-hover:text-brand">
-          {project.title}
+          {title}
         </h3>
         {project.client && <p className="mt-1 text-sm font-medium text-brand">{project.client}</p>}
         <p className="mt-3 line-clamp-2 text-sm leading-6 text-zinc-600">{description}</p>

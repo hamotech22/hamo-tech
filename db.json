@@ -6,7 +6,7 @@
       "title": "Car Rental Platform",
       "category": "Car rental",
       "slug": "car-rental-platform",
-      "image": "/src/assets/images/projects/car rental platform/1.PNG",
+      "image": "/src/assets/images/projects/car rental platform/1.jpeg",
       "images": [
         "/src/assets/images/projects/car rental platform/2.PNG",
         "/src/assets/images/projects/car rental platform/6.PNG",
@@ -23,14 +23,14 @@
         "/src/assets/images/projects/car rental platform/Screenshot 2026-10-17 005537.png",
         "/src/assets/images/projects/car rental platform/Screenshot 2026-10-17 005553.png"
       ],
-      "description": "A web platform for browsing and managing car rentals."
+      "description": "A complete Laravel 12 MVC car rental platform with an intuitive customer experience and a powerful admin dashboard."
     },
     {
       "id": 2,
       "title": "Guards System Website",
       "category": "Security system",
       "slug": "guards-system-website",
-      "image": "/src/assets/images/projects/cuards system website/1.PNG",
+      "image": "/src/assets/images/projects/cuards system website/1.jpeg",
       "images": [
         "/src/assets/images/projects/cuards system website/2.PNG",
         "/src/assets/images/projects/cuards system website/3.PNG",
@@ -40,7 +40,7 @@
         "/src/assets/images/projects/cuards system website/7.PNG",
         "/src/assets/images/projects/cuards system website/8.PNG"
       ],
-      "description": "A website for a guards and security management system."
+      "description": "A security company website for requesting trained guards for businesses, homes, and personal protection."
     },
     {
       "id": 3,
@@ -57,14 +57,14 @@
         "/src/assets/images/projects/secureVision - security solution/7.png",
         "/src/assets/images/projects/secureVision - security solution/8.png"
       ],
-      "description": "A website presenting SecureVision's security solution."
+      "description": "A SecureVision website with multiple customer contact channels, an admin dashboard for managing inquiries, and role-based access control."
     },
     {
       "id": 4,
       "title": "Store",
       "category": "E-commerce",
       "slug": "store",
-      "image": "/src/assets/images/projects/store/1.png",
+      "image": "/src/assets/images/projects/store/1.jpeg",
       "images": [
         "/src/assets/images/projects/store/2.png",
         "/src/assets/images/projects/store/3.png",
@@ -74,6 +74,23 @@
         "/src/assets/images/projects/store/7.png"
       ],
       "description": "An online store website."
+    },
+    {
+      "id": 5,
+      "title": "Angular 18 E-commerce App (Front-end Only)",
+      "category": "E-commerce",
+      "slug": "angular-18-e-commerce-app",
+      "image": "/src/assets/images/projects/angular 18 E-commerce app/1.png",
+      "images": [
+        "/src/assets/images/projects/angular 18 E-commerce app/2.png",
+        "/src/assets/images/projects/angular 18 E-commerce app/3.png",
+        "/src/assets/images/projects/angular 18 E-commerce app/4.png",
+        "/src/assets/images/projects/angular 18 E-commerce app/5.png",
+        "/src/assets/images/projects/angular 18 E-commerce app/6.png",
+        "/src/assets/images/projects/angular 18 E-commerce app/7.png",
+        "/src/assets/images/projects/angular 18 E-commerce app/8.png"
+      ],
+      "description": "A front-end-only e-commerce storefront built with Angular 18, using a Fake API to simulate data and ready to connect to a real backend or custom API."
     }
   ],
   "gallery": [
@@ -124,7 +141,7 @@
     {
       "id": 1,
       "featured": true,
-      "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=85",
+      "image": "/src/assets/images/blogs/Website Planning Workspace Blueprint.png",
       "title": "Building a Photography Portfolio with Presence",
       "excerpt": "A strong photography portfolio does more than collect images. It gives your point of view a clear shape and helps the right clients understand what you see.",
       "author": {
@@ -138,7 +155,7 @@
     },
     {
       "id": 2,
-      "image": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1200&q=85",
+      "image": "/src/assets/images/blogs/SecureVision Responsive Design Showcase.png",
       "title": "How to Prepare for a Brand Photoshoot",
       "excerpt": "A practical guide to aligning your concept, shot list, location, and team before the camera comes out.",
       "date": "Mar 15, 2022",
@@ -147,7 +164,7 @@
     },
     {
       "id": 3,
-      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=85",
+      "image": "/src/assets/images/blogs/SecureVision Dashboard Workspace.png",
       "title": "Finding the Right Light for a Portrait",
       "excerpt": "Explore how direction, softness, and timing can change the feeling of a portrait before you change anything else.",
       "date": "Apr 8, 2022",
@@ -156,7 +173,7 @@
     },
     {
       "id": 4,
-      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85",
+      "image": "/src/assets/images/blogs/Frontend to Laravel API Architecture.png",
       "title": "Why Visual Consistency Matters for Brands",
       "excerpt": "Learn how a consistent image language helps a brand feel recognizable, considered, and trustworthy.",
       "date": "Jun 12, 2024",
@@ -165,7 +182,7 @@
     },
     {
       "id": 5,
-      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=85",
+      "image": "/src/assets/images/blogs/Creative Workspace for Better Stories.png",
       "title": "The Details That Make an Image Feel Real",
       "excerpt": "A closer look at texture, gesture, imperfection, and the small decisions that give photographs their character.",
       "date": "Jan 7, 2023",
@@ -174,7 +191,7 @@
     },
     {
       "id": 6,
-      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=85",
+      "image": "/src/assets/images/blogs/Laravel API Architecture Infographic.png",
       "title": "The Details That Make an Image Feel Real",
       "excerpt": "A closer look at texture, gesture, imperfection, and the small decisions that give photographs their character.",
       "date": "Jan 7, 2023",
@@ -183,7 +200,7 @@
     },
     {
       "id": 7,
-      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=85",
+      "image": "/src/assets/images/blogs/Website Planning Workspace Blueprint.png",
       "title": "The Details That Make an Image Feel Real",
       "excerpt": "A closer look at texture, gesture, imperfection, and the small decisions that give photographs their character.",
       "date": "Jan 7, 2023",
@@ -281,38 +298,6 @@
       ],
       "iconPaths": [
         "M8 8 4 12l4 4M16 8l4 4-4 4M13 5l-2 14"
-      ]
-    },
-    {
-      "id": 5,
-      "slug": "maintenance-support",
-      "title": "Maintenance & Support",
-      "description": "Keep your product healthy after launch. We fix issues quickly, keep everything up to date, and make sure your website keeps working the way your visitors expect.",
-      "details": "After launch we stay close: monitoring, regular updates, and quick fixes so small problems never turn into big ones.",
-      "skills": [
-        "Bug fixes",
-        "Updates",
-        "Monitoring"
-      ],
-      "iconPaths": [
-        "M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18l3 3 5.3-5.3a5 5 0 0 0 6.4-6.4L14 13l-3-3 3.7-3.7Z"
-      ]
-    },
-    {
-      "id": 6,
-      "slug": "performance-optimization",
-      "title": "Performance & Optimization",
-      "description": "Make your website faster and easier to find. We improve loading speed, search visibility, and accessibility so more people can enjoy your site.",
-      "details": "We measure what slows your site down, fix it step by step, and improve search visibility so the right people find you.",
-      "skills": [
-        "Speed",
-        "SEO",
-        "Accessibility"
-      ],
-      "iconPaths": [
-        "M3.5 17.5a9 9 0 1 1 17 0",
-        "M12 13l4-4",
-        "M12 13h.01"
       ]
     }
   ]

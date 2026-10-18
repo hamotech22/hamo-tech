@@ -4,6 +4,7 @@ import BlogCard from "./BlogCard";
 import useLanguage from "../../context/useLanguage";
 import { getCollection } from "../../lib/api";
 import profileImage from "../../assets/images/profile.jpeg";
+import { resolveBlogImage } from "../../lib/projectImages";
 
 const focusRing =
   "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
@@ -82,7 +83,7 @@ export default function Blog() {
           >
             <div className="aspect-[3/2] overflow-hidden rounded-3xl bg-zinc-100">
               <img
-                src={featured.image}
+                src={resolveBlogImage(featured.image)}
                 alt={featured.title}
                 className="size-full object-cover transition duration-700 ease-out group-hover:scale-105"
               />

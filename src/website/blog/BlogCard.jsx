@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import useLanguage from "../../context/useLanguage";
+import { resolveBlogImage } from "../../lib/projectImages";
 
 const focusRing =
   "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
@@ -18,7 +19,7 @@ export default function BlogCard({ post }) {
       {/* الصورة */}
       <div className="aspect-[5/4] overflow-hidden rounded-3xl bg-zinc-100">
         <img
-          src={item.image}
+          src={resolveBlogImage(item.image)}
           alt={item.title}
           loading="lazy"
           className="size-full object-cover transition duration-700 ease-out group-hover:scale-105"

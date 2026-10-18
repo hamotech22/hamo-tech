@@ -3,6 +3,7 @@ import { Link, useParams, Navigate } from "react-router-dom";
 import useLanguage from "../../context/useLanguage";
 import { getCollection } from "../../lib/api";
 import profileImage from "../../assets/images/profile.jpeg";
+import { resolveBlogImage } from "../../lib/projectImages";
 
 const focusRing =
   "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
@@ -114,7 +115,7 @@ export default function BlogDetail() {
 
         {/* الصورة */}
         <div className="mt-10 aspect-[5/3] overflow-hidden rounded-[2rem] bg-zinc-100 shadow-xl shadow-zinc-900/10 ring-1 ring-zinc-900/5">
-          <img src={post.image} alt={post.title} className="size-full object-cover" />
+          <img src={resolveBlogImage(post.image)} alt={post.title} className="size-full object-cover" />
         </div>
 
         {/* محتوى المقال (HTML جاي من الـ API) */}
