@@ -5,8 +5,7 @@ import useLanguage from "../../context/useLanguage";
 import { getCollection } from "../../lib/api";
 import { resolveProjectImage } from "../../lib/projectImages";
 
-const focusRing =
-  "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
+const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
 
 export default function ProjectDetail() {
   const { t } = useLanguage();
@@ -50,9 +49,7 @@ export default function ProjectDetail() {
   const projectDetails = t.projects.details?.[project.id];
 
   // الصورة الرئيسية + باقي الصور (بدون تكرار، 8 كحد أقصى)
-  const gallery = [...new Set([project.image, ...(project.images ?? [])].filter(Boolean))]
-    .slice(0, 8)
-    .map(resolveProjectImage);
+  const gallery = [...new Set([project.image, ...(project.images ?? [])].filter(Boolean))].slice(0, 8).map(resolveProjectImage);
   const current = activeIndex < gallery.length ? activeIndex : 0;
 
   return (
@@ -63,7 +60,9 @@ export default function ProjectDetail() {
           to="/projects"
           className={`inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-zinc-600 ring-1 ring-zinc-900/10 transition hover:text-brand ${focusRing}`}
         >
-          <span aria-hidden="true" className="rtl:rotate-180">←</span>
+          <span aria-hidden="true" className="rtl:rotate-180">
+            ←
+          </span>
           {t.projects.back}
         </Link>
 
@@ -71,14 +70,8 @@ export default function ProjectDetail() {
           {/* ===== المعرض ===== */}
           <div>
             {/* الصورة الكبيرة */}
-            <div
-              className="aspect-[4/3] overflow-hidden rounded-[2rem] bg-zinc-100 shadow-xl shadow-zinc-900/10 ring-1 ring-zinc-900/5"
-            >
-              <img
-                src={gallery[current]}
-                alt={projectTitle}
-                className="size-full object-contain"
-              />
+            <div className="aspect-[4/3] overflow-hidden rounded-[2rem] bg-zinc-100 shadow-xl shadow-zinc-900/10 ring-1 ring-zinc-900/5">
+              <img src={gallery[current]} alt={projectTitle} className="size-full object-contain" />
             </div>
 
             {/* الصور الصغيرة */}
@@ -92,9 +85,7 @@ export default function ProjectDetail() {
                     aria-label={`${projectTitle} ${index + 1}`}
                     aria-pressed={index === current}
                     className={`aspect-[4/3] overflow-hidden rounded-2xl bg-zinc-100 transition duration-300 ${focusRing} ${
-                      index === current
-                        ? "ring-2 ring-brand ring-offset-2 ring-offset-zinc-50"
-                        : "opacity-60 hover:opacity-100"
+                      index === current ? "ring-2 ring-brand ring-offset-2 ring-offset-zinc-50" : "opacity-60 hover:opacity-100"
                     }`}
                   >
                     <img src={src} alt="" loading="lazy" className="size-full object-contain" />
@@ -110,7 +101,7 @@ export default function ProjectDetail() {
               {t.projects.categories[project.category] ?? project.category}
             </span>
 
-            <h1 className="mt-4 text-balance text-3xl font-semibold leading-tight tracking-tight text-zinc-950 after:mt-4 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand-accent sm:text-4xl">
+            <h1 className="mt-4 text-balance text-3xl font-semibold leading-tight tracking-tight text-zinc-950 after:mt-4 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand sm:text-4xl">
               {projectTitle}
             </h1>
 
@@ -134,7 +125,9 @@ export default function ProjectDetail() {
                     <ul className="mt-3 space-y-2 text-sm leading-6 text-zinc-600">
                       {projectDetails.components.map((component) => (
                         <li key={component} className="flex gap-2">
-                          <span aria-hidden="true" className="text-brand">•</span>
+                          <span aria-hidden="true" className="text-brand">
+                            •
+                          </span>
                           <span>{component}</span>
                         </li>
                       ))}
@@ -150,7 +143,9 @@ export default function ProjectDetail() {
                     <ul className="mt-3 space-y-2 text-sm leading-6 text-zinc-600">
                       {projectDetails.features.map((feature) => (
                         <li key={feature} className="flex gap-2">
-                          <span aria-hidden="true" className="text-brand">•</span>
+                          <span aria-hidden="true" className="text-brand">
+                            •
+                          </span>
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -188,10 +183,7 @@ export default function ProjectDetail() {
                     <h2 className="text-sm font-semibold text-zinc-950">{t.projects.technologiesTitle}</h2>
                     <ul className="mt-3 flex flex-wrap gap-2">
                       {projectDetails.technologies.map((technology) => (
-                        <li
-                          key={technology}
-                          className="rounded-full bg-zinc-100 px-3 py-1.5 text-xs font-medium text-zinc-700"
-                        >
+                        <li key={technology} className="rounded-full bg-zinc-100 px-3 py-1.5 text-xs font-medium text-zinc-700">
                           {technology}
                         </li>
                       ))}

@@ -67,7 +67,6 @@ export default function Hero() {
   const { lang, t } = useLanguage();
   const [gallery, setGallery] = useState([]);
   const [typingProgress, setTypingProgress] = useState({ text: t.hero.badge, length: 0 });
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   useEffect(() => {
     getCollection("/gallery")
@@ -79,8 +78,6 @@ export default function Hero() {
 
   useEffect(() => {
     const badgeText = t.hero.badge;
-    if (reduceMotion) return;
-
     let characterIndex = 0;
     let direction = 1;
     let pauseTicks = 0;
@@ -101,11 +98,12 @@ export default function Hero() {
     }, 65);
 
     return () => window.clearInterval(typingTimer);
-  }, [reduceMotion, t.hero.badge]);
+  }, [t.hero.badge]);
 
-  const typedBadge = reduceMotion
-    ? t.hero.badge
-    : t.hero.badge.slice(0, typingProgress.text === t.hero.badge ? typingProgress.length : 0);
+  const typedBadge = t.hero.badge.slice(
+    0,
+    typingProgress.text === t.hero.badge ? typingProgress.length : 0,
+  );
 
   return (
     <div className="hx" data-theme="light" dir={lang === "ar" ? "rtl" : "ltr"}>

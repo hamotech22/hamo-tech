@@ -46,7 +46,7 @@ export default function Blog() {
           data-aos="fade-up"
         >
           <div className="max-w-2xl">
-            <h2 className="text-balance text-4xl font-semibold leading-tight tracking-tight text-zinc-950 after:mt-5 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand-accent sm:text-5xl">
+            <h2 className="text-balance text-4xl font-semibold leading-tight tracking-tight text-zinc-950 after:mt-5 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand sm:text-5xl">
               {t.blog.homeTitle}
             </h2>
             <p className="mt-6 max-w-xl text-pretty text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">

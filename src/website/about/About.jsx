@@ -17,7 +17,7 @@ export default function About() {
         <div className="mx-auto max-w-4xl text-center">
           <h1
             {...modern}
-            className="text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-white after:mx-auto after:mt-5 after:block after:h-1 after:w-16 after:rounded-full after:bg-brand-accent sm:text-5xl"
+            className="text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-white after:mx-auto after:mt-5 after:block after:h-1 after:w-16 after:rounded-full after:bg-brand sm:text-5xl"
           >
             {t.about.title}
           </h1>
@@ -40,7 +40,7 @@ export default function About() {
           </div>
 
           <div {...modern} className="flex flex-col justify-center space-y-5">
-            <h2 className="text-2xl font-semibold tracking-tight text-white after:mt-4 after:block after:h-1 after:w-12 after:rounded-full after:bg-brand-accent sm:text-3xl">{t.about.storyTitle}</h2>
+            <h2 className="text-2xl font-semibold tracking-tight text-white after:mt-4 after:block after:h-1 after:w-12 after:rounded-full after:bg-brand sm:text-3xl">{t.about.storyTitle}</h2>
             <p className="text-pretty text-base leading-7 text-zinc-400">{t.about.story1}</p>
             <p className="text-pretty text-base leading-7 text-zinc-400">{t.about.story2}</p>
           </div>

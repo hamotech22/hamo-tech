@@ -60,11 +60,11 @@ export default function ServiceDetail() {
 
         <div className="mt-8 rounded-[2rem] bg-white p-6 shadow-xl shadow-zinc-900/5 ring-1 ring-zinc-900/5 sm:p-10">
           {/* الأيقونة */}
-          <span className="grid size-14 place-items-center rounded-2xl bg-brand-accent/15 text-amber-700">
+          <span className="grid size-14 place-items-center rounded-2xl bg-brand/10 text-brand">
             <Icon paths={service.iconPaths} className="size-7" />
           </span>
 
-          <h1 className="mt-6 text-balance text-3xl font-semibold leading-tight tracking-tight text-zinc-950 after:mt-5 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand-accent sm:text-5xl">
+          <h1 className="mt-6 text-balance text-3xl font-semibold leading-tight tracking-tight text-zinc-950 after:mt-5 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand sm:text-5xl">
             {service.title}
           </h1>
 

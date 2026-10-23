@@ -27,7 +27,7 @@ export default function Services() {
         <div className="grid gap-12 md:grid-cols-[0.85fr_1.15fr] md:gap-16">
           {/* المقدمة (بتفضل ثابتة وقت السكرول في الشاشات الكبيرة) */}
           <div className="md:sticky md:top-28 md:self-start" data-aos="fade-up">
-            <h2 className="max-w-md text-balance text-4xl font-semibold leading-tight tracking-tight text-zinc-950 after:mt-5 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand-accent sm:text-5xl">
+            <h2 className="max-w-md text-balance text-4xl font-semibold leading-tight tracking-tight text-zinc-950 after:mt-5 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand sm:text-5xl">
               {t.services.title}
             </h2>
 
@@ -64,7 +64,7 @@ export default function Services() {
                     key={service.id}
                     className="flex flex-col rounded-[2rem] bg-zinc-50 p-6 ring-1 ring-zinc-900/5"
                   >
-                    <span className="grid size-12 place-items-center rounded-2xl bg-brand-accent/15 text-amber-700">
+                    <span className="grid size-12 place-items-center rounded-2xl bg-brand/10 text-brand">
                       <Icon paths={service.iconPaths} />
                     </span>
 
@@ -98,7 +98,7 @@ export default function Services() {
         >
           <div className="max-w-3xl">
             <p className="text-sm font-medium text-brand-light">{t.designPartner.badge}</p>
-            <h3 className="mt-2 text-xl font-semibold tracking-tight after:mt-3 after:block after:h-1 after:w-12 after:rounded-full after:bg-brand-accent sm:text-2xl">
+            <h3 className="mt-2 text-xl font-semibold tracking-tight after:mt-3 after:block after:h-1 after:w-12 after:rounded-full after:bg-brand sm:text-2xl">
               {t.designPartner.title}
             </h3>
             <p className="mt-3 text-sm leading-6 text-zinc-300 sm:text-base">{t.designPartner.description}</p>
@@ -106,7 +106,7 @@ export default function Services() {
             <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm text-zinc-300">
               {[t.designPartner.tailored, t.designPartner.grows].map((benefit) => (
                 <span key={benefit} className="inline-flex items-center gap-2">
-                  <span aria-hidden="true" className="size-1.5 rounded-full bg-brand-accent" />
+                  <span aria-hidden="true" className="size-1.5 rounded-full bg-brand-light" />
                   {benefit}
                 </span>
               ))}

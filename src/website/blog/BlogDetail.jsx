@@ -89,7 +89,7 @@ export default function BlogDetail() {
             {post.date}
           </time>
 
-          <h1 className="mt-5 text-balance text-3xl font-semibold leading-tight tracking-tight text-zinc-950 after:mt-5 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand-accent sm:text-4xl lg:text-5xl">
+          <h1 className="mt-5 text-balance text-3xl font-semibold leading-tight tracking-tight text-zinc-950 after:mt-5 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand sm:text-4xl lg:text-5xl">
             {post.title}
           </h1>
 

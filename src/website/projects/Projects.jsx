@@ -4,8 +4,7 @@ import ProjectCard from "./ProjectCard";
 import useLanguage from "../../context/useLanguage";
 import { getCollection } from "../../lib/api";
 
-const focusRing =
-  "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
+const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
 
 // الـ ids بتاعة المشاريع اللي تظهر في الهوم (بالترتيب ده)
 const HOME_PROJECT_IDS = [1, 2, 3, 4];
@@ -27,20 +26,15 @@ export default function Projects({ onLoadingChange }) {
       .finally(() => onLoadingChange?.(false));
   }, [onLoadingChange]);
 
-  const homeProjects = HOME_PROJECT_IDS
-    .map((id) => projects.find((p) => String(p.id) === String(id)))
-    .filter(Boolean);
+  const homeProjects = HOME_PROJECT_IDS.map((id) => projects.find((p) => String(p.id) === String(id))).filter(Boolean);
 
   return (
     <section id="projects" className="relative overflow-hidden bg-zinc-50 px-5 py-20 sm:py-28 md:px-10">
       <div className="relative mx-auto max-w-6xl">
         {/* العنوان + زر عرض الكل */}
-        <div
-          className="mb-12 flex flex-col gap-6 sm:mb-16 md:flex-row md:items-end md:justify-between"
-          data-aos="fade-up"
-        >
+        <div className="mb-12 flex flex-col gap-6 sm:mb-16 md:flex-row md:items-end md:justify-between" data-aos="fade-up">
           <div className="max-w-2xl">
-            <h2 className="text-balance text-4xl font-semibold leading-tight tracking-tight text-zinc-950 after:mt-5 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand-accent sm:text-5xl">
+            <h2 className="text-balance text-4xl font-semibold leading-tight tracking-tight text-zinc-950 after:mt-5 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand sm:text-5xl">
               {t.projects.homeTitle}
             </h2>
             <p className="mt-6 max-w-xl text-pretty text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">

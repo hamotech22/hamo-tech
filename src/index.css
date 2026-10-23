@@ -302,12 +302,7 @@ html[lang="ar"] body {
 	filter: drop-shadow(0 18px 28px rgb(3 105 161 / 38%));
 }
 
-@media (prefers-reduced-motion: reduce) {
-	.hx-badge i,
-	.hx-typing-cursor {
-		animation: none;
-	}
-}
+
 
 .hx-fill {
 	position: absolute;
@@ -428,6 +423,5 @@ html body h5,
 html body h6 {
 	font-size: clamp(0.9375rem, 0.9rem + 0.3vw, 1.125rem);
 }
-
 
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import useLanguage from "../../context/useLanguage";
 import brandLogo from "../../assets/images/Hamo-Tech_Footer_Logo.png";
 import { getCollection } from "../../lib/api";
@@ -19,6 +19,18 @@ const legalLinks = [
 ];
 
 const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand";
+
+// نفس منطق النافبار: خط تحت الرابط الحالي بدل التظليل
+const linkClass = (isActive, shape = "rounded-full") =>
+  `${shape} px-4 py-2 text-base underline-offset-8 transition hover:text-white ${focusRing} ${
+    isActive ? "text-white underline decoration-brand decoration-2" : "text-zinc-300 no-underline"
+  }`;
+
+// روابط الـ legal (أصغر شوية)
+const legalClass = (isActive) =>
+  `rounded-full px-2 py-1 underline-offset-8 transition hover:text-white ${focusRing} ${
+    isActive ? "text-white underline decoration-brand decoration-2" : "text-zinc-400 no-underline"
+  }`;
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -51,13 +63,14 @@ export default function Footer() {
           {/* Main menu */}
           <nav aria-label={t.footer.navigation} className="flex flex-wrap items-center justify-center gap-x-1 gap-y-2">
             {navLinks.map((link) => (
-              <Link
+              <NavLink
                 key={link.key}
                 to={link.href}
-                className={`rounded-full px-4 py-2 text-base text-zinc-300 transition hover:bg-white/5 hover:text-white ${focusRing}`}
+                end={link.href === "/"}
+                className={({ isActive }) => linkClass(isActive)}
               >
                 {t.nav[link.key]}
-              </Link>
+              </NavLink>
             ))}
           </nav>
 
@@ -97,11 +110,15 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4">
             {legalLinks.map((link) => (
-              <Link key={link.key} to={link.href} className="transition hover:text-white">
+              <NavLink
+                key={link.key}
+                to={link.href}
+                className={({ isActive }) => legalClass(isActive)}
+              >
                 {t.footer[link.key]}
-              </Link>
+              </NavLink>
             ))}
           </div>
         </div>

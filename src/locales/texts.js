@@ -65,7 +65,7 @@ const texts = {
         1: "A complete car rental platform built with Laravel MVC, featuring a powerful admin dashboard and a simple, user-friendly customer experience.",
         2: "A security company website that helps customers request trusted, professional guards for businesses, homes, and personal protection.",
         3: "A SecureVision website that makes it easy for customers to contact the company, while giving administrators an efficient way to manage inquiries and user permissions.",
-        4: "An online store website.",
+        4: "A front-end-only e-commerce storefront built with React.js and Tailwind CSS. It includes product browsing, product details, a cart, checkout, and wishlist, with JSON-Server used to simulate API data and no production backend.",
         5: "A front-end-only e-commerce storefront built with Angular 18 and a Fake API for simulated data. It is ready to connect to an existing backend or a custom API.",
       },
       featuresTitle: "Key features",
@@ -116,6 +116,25 @@ const texts = {
             "Super Admin role with full control over site content, contact details, header, footer, users, roles, and permissions",
           ],
           technologies: ["React.js", "Laravel API", "Strapi CMS", "MySQL", "Bootstrap", "Tailwind CSS", "Postman"],
+        },
+        4: {
+          components: [
+            "Home page",
+            "Product listing",
+            "Product details",
+            "Shopping cart",
+            "Checkout page",
+            "Product wishlist",
+            "Login and registration form UI",
+          ],
+          features: [
+            "Responsive design for phones, tablets, and desktops",
+            "Front-end only, with no production backend",
+            "JSON-Server used to simulate API data",
+            "Clean code that is easy to customize",
+            "Suitable as a learning project or a foundation for a real e-commerce store",
+          ],
+          technologies: ["React.js", "Tailwind CSS", "HTML", "CSS", "Responsive Design", "JSON-Server (Fake API)"],
         },
         5: {
           components: [
@@ -477,7 +496,7 @@ const texts = {
         1: "منصة متكاملة لتأجير السيارات مطورة باستخدام Laravel MVC، مع لوحة تحكم قوية للإدارة وتجربة سهلة وبسيطة للعملاء.",
         2: "موقع لشركة أمن يسهّل على العملاء طلب رجال أمن موثوقين ومتخصصين للشركات والمنازل والحراسة الشخصية.",
         3: "موقع SecureVision يسهّل على العملاء التواصل مع الشركة، ويوفر للإدارة طريقة فعّالة لمتابعة الاستفسارات وإدارة صلاحيات المستخدمين.",
-        4: "موقع متجر إلكتروني.",
+        4: "واجهة متجر إلكتروني فقط مبنية باستخدام React.js وTailwind CSS، دون Backend فعلي، وتستخدم JSON-Server لمحاكاة بيانات الـAPI. تضم تصفح المنتجات وتفاصيلها وعربة التسوق والدفع وقائمة المفضلة.",
         5: "واجهة متجر إلكتروني مبنية باستخدام Angular 18، مع Fake API لمحاكاة البيانات، وجاهزة للربط مع Backend موجود أو API مخصص.",
       },
       featuresTitle: "الميزات الرئيسية",
@@ -528,6 +547,25 @@ const texts = {
             "صلاحية Super Admin للتحكم الكامل في محتوى الموقع وبيانات التواصل والـHeader والـFooter والمستخدمين والأدوار والصلاحيات",
           ],
           technologies: ["React.js", "Laravel API", "Strapi CMS", "MySQL", "Bootstrap", "Tailwind CSS", "Postman"],
+        },
+        4: {
+          components: [
+            "الصفحة الرئيسية",
+            "عرض المنتجات",
+            "صفحة تفاصيل المنتج",
+            "عربة التسوق",
+            "صفحة الدفع",
+            "قائمة المنتجات المفضلة (Wishlist)",
+            "واجهات نماذج تسجيل الدخول وإنشاء الحساب",
+          ],
+          features: [
+            "تصميم متجاوب مع الهواتف والأجهزة اللوحية والحواسيب",
+            "واجهة أمامية فقط دون Backend فعلي",
+            "استخدام JSON-Server لمحاكاة بيانات الـAPI",
+            "كود نظيف وسهل التعديل",
+            "مناسب كمشروع تدريبي أو كنواة لمتجر إلكتروني حقيقي",
+          ],
+          technologies: ["React.js", "Tailwind CSS", "HTML", "CSS", "تصميم متجاوب", "JSON-Server (Fake API)"],
         },
         5: {
           components: [

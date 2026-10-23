@@ -47,7 +47,7 @@ export default function BlogList() {
       <div className="relative mx-auto max-w-6xl">
         {/* العنوان */}
         <div className="mb-12 max-w-2xl sm:mb-16" data-aos="fade-up">
-          <h1 className="text-balance text-4xl font-semibold leading-tight tracking-tight text-zinc-950 after:mt-5 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand-accent sm:text-5xl lg:text-6xl">
+          <h1 className="text-balance text-4xl font-semibold leading-tight tracking-tight text-zinc-950 after:mt-5 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand sm:text-5xl lg:text-6xl">
             {t.blog.listTitle}
           </h1>
           <p className="mt-6 max-w-xl text-pretty text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">

@@ -10,7 +10,7 @@ export default function FAQ() {
         <div className="grid items-start gap-12 lg:grid-cols-[1.4fr_0.9fr] lg:gap-14">
           {/* ===== الأسئلة ===== */}
           <div data-aos="fade-up">
-            <h2 className="max-w-3xl text-balance text-4xl font-semibold leading-tight tracking-tight text-zinc-950 after:mt-5 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand-accent sm:text-5xl">
+            <h2 className="max-w-3xl text-balance text-4xl font-semibold leading-tight tracking-tight text-zinc-950 after:mt-5 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand sm:text-5xl">
               {t.faq.title}
             </h2>
 

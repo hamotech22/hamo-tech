@@ -11,7 +11,7 @@ export default function Metrics() {
         {/* Header */}
         <div className="mb-12 flex flex-col gap-6 sm:mb-16 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
-            <h2 className="text-balance text-3xl font-semibold leading-[1.1] tracking-tight text-zinc-950 after:mt-4 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand-accent sm:text-4xl lg:text-5xl">
+            <h2 className="text-balance text-3xl font-semibold leading-[1.1] tracking-tight text-zinc-950 after:mt-4 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand sm:text-4xl lg:text-5xl">
               {t.metrics.title}
             </h2>
 

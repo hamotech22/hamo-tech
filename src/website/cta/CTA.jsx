@@ -9,7 +9,7 @@ export default function CTA() {
       <div className="relative mx-auto flex max-w-6xl flex-col items-start gap-8 overflow-hidden rounded-3xl bg-[linear-gradient(110deg,#071522_0%,#102436_55%,#111b2b_100%)] px-7 py-10 sm:px-10 sm:py-12 md:flex-row md:items-end md:justify-between md:px-14 md:py-14">
         <div className="relative max-w-3xl">
           <span className="text-sm font-medium text-brand-light">{t.nav.contact}</span>
-          <h2 className="mt-3 text-balance text-2xl font-semibold leading-tight tracking-tight text-white after:mt-4 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand-accent sm:text-3xl md:text-4xl">
+          <h2 className="mt-3 text-balance text-2xl font-semibold leading-tight tracking-tight text-white after:mt-4 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand sm:text-3xl md:text-4xl">
             {t.cta.title}
           </h2>
           <p className="mt-4 max-w-2xl text-pretty text-base leading-7 text-zinc-300 sm:text-lg sm:leading-8">

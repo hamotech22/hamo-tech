@@ -8,8 +8,9 @@ const ACCESS_KEY = "434a21b1-bb51-4b1e-add2-f9f375b66b0a";
 
 const contactEmail = (import.meta.env.VITE_CONTACT_EMAIL || "").trim();
 
+// text-base على الموبايل (16px) عشان Safari ميعملش zoom، و text-sm من sm وطالع
 const inputClasses =
-  "w-full rounded-xl border border-zinc-200 bg-white px-4 py-3.5 text-sm text-zinc-900 outline-none transition placeholder:text-zinc-400 focus:border-brand focus:ring-2 focus:ring-brand/15";
+  "w-full rounded-xl border border-zinc-200 bg-white px-4 py-3.5 text-base text-zinc-900 outline-none transition placeholder:text-zinc-400 focus:border-brand focus:ring-2 focus:ring-brand/15 sm:text-sm";
 
 export default function ContactUs() {
   const { t } = useLanguage();
@@ -51,7 +52,7 @@ export default function ContactUs() {
   return (
     <section id="contact" className="scroll-mt-24 bg-zinc-50 px-5 pb-20 pt-12 sm:px-8 sm:pb-28 sm:pt-16">
       <div className="mx-auto max-w-4xl text-center">
-        <h2 className="text-balance text-3xl font-semibold tracking-tight text-zinc-950 after:mx-auto after:mt-4 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand-accent sm:text-4xl lg:text-5xl">
+        <h2 className="text-balance text-3xl font-semibold tracking-tight text-zinc-950 after:mx-auto after:mt-4 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand sm:text-4xl lg:text-5xl">
           {t.contact.title}
         </h2>
 

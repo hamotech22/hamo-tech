@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 import useLanguage from "../../context/useLanguage";
 import { resolveProjectImage } from "../../lib/projectImages";
 
-const focusRing =
-  "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
+const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
 
 // big = true يخلي الكارت أعرض (بياخد عمودين)
 export default function ProjectCard({ project, big = false }) {
@@ -21,17 +20,8 @@ export default function ProjectCard({ project, big = false }) {
       }`}
     >
       {/* الصورة */}
-      <div
-        className={`relative overflow-hidden rounded-3xl bg-zinc-100 ${
-          big ? "aspect-[16/9]" : "aspect-[3/2]"
-        }`}
-      >
-        <img
-          src={resolveProjectImage(project.image)}
-          alt={title}
-          loading="lazy"
-          className="size-full object-contain"
-        />
+      <div className={`relative overflow-hidden rounded-3xl bg-zinc-100 ${big ? "aspect-[16/9]" : "aspect-[3/2]"}`}>
+        <img src={resolveProjectImage(project.image)} alt={title} loading="lazy" className="size-full object-contain" />
 
         {/* تدرج غامق خفيف من تحت */}
         <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-zinc-950/50 via-transparent to-transparent" />
@@ -42,11 +32,7 @@ export default function ProjectCard({ project, big = false }) {
         </span>
 
         {/* السنة */}
-        {project.year && (
-          <span className="absolute bottom-4 start-4 text-sm font-medium tabular-nums text-white">
-            {project.year}
-          </span>
-        )}
+        {project.year && <span className="absolute bottom-4 start-4 text-sm font-medium tabular-nums text-white">{project.year}</span>}
 
         {/* سهم */}
         <span
@@ -61,9 +47,7 @@ export default function ProjectCard({ project, big = false }) {
 
       {/* النصوص */}
       <div className="px-3 pb-3 pt-5">
-        <h3 className="text-xl font-semibold tracking-tight text-zinc-950 transition-colors group-hover:text-brand">
-          {title}
-        </h3>
+        <h3 className="text-xl font-semibold tracking-tight text-zinc-950 transition-colors group-hover:text-brand">{title}</h3>
         {project.client && <p className="mt-1 text-sm font-medium text-brand">{project.client}</p>}
         <p className="mt-3 line-clamp-2 text-sm leading-6 text-zinc-600">{description}</p>
       </div>

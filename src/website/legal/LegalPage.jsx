@@ -26,7 +26,7 @@ export default function LegalPage({ documentKey }) {
           data-aos-offset="30"
         >
           <p className="text-sm font-medium text-brand">{t.legal.label}</p>
-          <h1 className="mt-3 text-balance text-3xl font-semibold leading-tight tracking-tight text-zinc-950 after:mt-4 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand-accent sm:text-4xl lg:text-5xl">
+          <h1 className="mt-3 text-balance text-3xl font-semibold leading-tight tracking-tight text-zinc-950 after:mt-4 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand sm:text-4xl lg:text-5xl">
             {document.title}
           </h1>
           <p className="mt-5 text-pretty text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">
