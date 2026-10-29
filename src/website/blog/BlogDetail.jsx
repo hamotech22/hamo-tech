@@ -4,6 +4,7 @@ import useLanguage from "../../context/useLanguage";
 import { getCollection } from "../../lib/api";
 import profileImage from "../../assets/images/profile.jpeg";
 import { resolveBlogImage } from "../../lib/projectImages";
+import Reveal from "../../components/animation/Reveal";
 
 const focusRing =
   "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
@@ -81,7 +82,7 @@ export default function BlogDetail() {
         </Link>
 
         {/* العنوان */}
-        <header className="mt-8" data-aos="fade-up">
+        <Reveal as="header" className="mt-8">
           <time
             dateTime={post.isoDate}
             className="inline-flex rounded-full bg-brand/10 px-3 py-1.5 text-xs font-medium text-brand ring-1 ring-brand/20"
@@ -111,7 +112,7 @@ export default function BlogDetail() {
               </div>
             </div>
           )}
-        </header>
+        </Reveal>
 
         {/* الصورة */}
         <div className="mt-10 aspect-[5/3] overflow-hidden rounded-[2rem] bg-zinc-100 shadow-xl shadow-zinc-900/10 ring-1 ring-zinc-900/5">

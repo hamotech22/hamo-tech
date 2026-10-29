@@ -3,6 +3,7 @@ import Icon from "./Icon";
 import useLanguage from "../../context/useLanguage";
 import { getCollection } from "../../lib/api";
 import { whatsappUrl } from "../../lib/contact";
+import Reveal from "../../components/animation/Reveal";
 
 export default function Services() {
   const { t } = useLanguage();
@@ -26,7 +27,7 @@ export default function Services() {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-12 md:grid-cols-[0.85fr_1.15fr] md:gap-16">
           {/* المقدمة (بتفضل ثابتة وقت السكرول في الشاشات الكبيرة) */}
-          <div className="md:sticky md:top-28 md:self-start" data-aos="fade-up">
+          <Reveal className="md:sticky md:top-28 md:self-start">
             <h2 className="max-w-md text-balance text-4xl font-semibold leading-tight tracking-tight text-zinc-950 after:mt-5 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand sm:text-5xl">
               {t.services.title}
             </h2>
@@ -35,7 +36,7 @@ export default function Services() {
               <p>{t.services.intro1}</p>
               <p>{t.services.intro2}</p>
             </div>
-          </div>
+          </Reveal>
 
           {/* كروت الخدمات */}
           <div>
@@ -92,9 +93,8 @@ export default function Services() {
         </div>
 
         {/* بانر التواصل */}
-        <div
+        <Reveal
           className="mt-12 flex flex-col gap-6 rounded-[2rem] bg-[linear-gradient(110deg,#071522_0%,#102436_55%,#111b2b_100%)] p-6 text-white sm:p-8 md:flex-row md:items-center md:justify-between md:p-10"
-          data-aos="fade-up"
         >
           <div className="max-w-3xl">
             <p className="text-sm font-medium text-brand-light">{t.designPartner.badge}</p>
@@ -128,7 +128,7 @@ export default function Services() {
               <path d="M221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 0-16h156.69l-58.35-58.34a8 8 0 0 1 11.32-11.32l72 72a8 8 0 0 1 0 11.32Z" />
             </svg>
           </a>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

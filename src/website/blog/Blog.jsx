@@ -5,6 +5,7 @@ import useLanguage from "../../context/useLanguage";
 import { getCollection } from "../../lib/api";
 import profileImage from "../../assets/images/profile.jpeg";
 import { resolveBlogImage } from "../../lib/projectImages";
+import Reveal from "../../components/animation/Reveal";
 
 const focusRing =
   "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
@@ -41,9 +42,8 @@ export default function Blog() {
     <section className="relative w-full overflow-hidden bg-zinc-50 px-5 py-20 sm:py-28 md:px-10 lg:px-16">
       <div className="relative mx-auto max-w-6xl">
         {/* العنوان + زر عرض الكل */}
-        <div
+        <Reveal
           className="mb-12 flex flex-col gap-6 sm:mb-16 md:flex-row md:items-end md:justify-between"
-          data-aos="fade-up"
         >
           <div className="max-w-2xl">
             <h2 className="text-balance text-4xl font-semibold leading-tight tracking-tight text-zinc-950 after:mt-5 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand sm:text-5xl">
@@ -67,7 +67,7 @@ export default function Blog() {
               <path d="M221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 0-16h156.69l-58.35-58.34a8 8 0 0 1 11.32-11.32l72 72a8 8 0 0 1 0 11.32Z" />
             </svg>
           </Link>
-        </div>
+        </Reveal>
 
         {loadError && (
           <p role="alert" className="mb-8 text-sm text-red-700">

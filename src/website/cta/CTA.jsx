@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import useLanguage from "../../context/useLanguage";
+import Reveal from "../../components/animation/Reveal";
 
 export default function CTA() {
   const { t } = useLanguage();
 
   return (
-    <section id="cta" className="scroll-mt-24 bg-white px-5 pb-20 sm:pb-28 md:px-10" data-aos="fade-up">
+    <Reveal as="section" id="cta" className="scroll-mt-24 bg-white px-5 pb-20 sm:pb-28 md:px-10">
       <div className="relative mx-auto flex max-w-6xl flex-col items-start gap-8 overflow-hidden rounded-3xl bg-[linear-gradient(110deg,#071522_0%,#102436_55%,#111b2b_100%)] px-7 py-10 sm:px-10 sm:py-12 md:flex-row md:items-end md:justify-between md:px-14 md:py-14">
         <div className="relative max-w-3xl">
           <span className="text-sm font-medium text-brand-light">{t.nav.contact}</span>
@@ -31,6 +32,6 @@ export default function CTA() {
           </svg>
         </Link>
       </div>
-    </section>
+    </Reveal>
   );
 }

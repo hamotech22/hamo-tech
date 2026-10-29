@@ -3,6 +3,7 @@ import ReactPaginateModule from "react-paginate";
 import ProjectCard from "./ProjectCard";
 import useLanguage from "../../context/useLanguage";
 import { getCollection } from "../../lib/api";
+import Reveal from "../../components/animation/Reveal";
 
 // حل مشكلة الـ default export مع Vite (react-paginate بتتحمل أحيانًا ككائن)
 const ReactPaginate = ReactPaginateModule.default ?? ReactPaginateModule;
@@ -46,14 +47,14 @@ export default function ProjectsList() {
     <section className="relative w-full overflow-hidden px-5 py-20 sm:py-28 md:px-10 lg:px-16">
       <div className="relative mx-auto max-w-6xl">
         {/* العنوان */}
-        <div className="mb-12 max-w-2xl sm:mb-16" data-aos="fade-up">
+        <Reveal className="mb-12 max-w-2xl sm:mb-16">
           <h1 className="text-balance text-4xl font-semibold leading-tight tracking-tight text-zinc-950 after:mt-5 after:block after:h-1 after:w-14 after:rounded-full after:bg-brand sm:text-5xl lg:text-6xl">
             {t.projects.listTitle}
           </h1>
           <p className="mt-6 max-w-xl text-pretty text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">
             {t.projects.listDescription}
           </p>
-        </div>
+        </Reveal>
 
         {loadError && (
           <p role="alert" className="text-sm text-red-700">

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import {
   ArrowLeft,
   ArrowRight,
@@ -62,9 +63,26 @@ const TILES = RAW.map((t) => {
   };
 });
 
+// ===== Animation variants =====
+const container = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.09, delayChildren: 0.15 } },
+};
+
+const tileVariants = {
+  hidden: { opacity: 0, y: 40, scale: 0.92 },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { type: "spring", stiffness: 90, damping: 16 },
+  },
+};
+
 
 export default function Hero() {
   const { lang, t } = useLanguage();
+  const reduceMotion = useReducedMotion();
   const [gallery, setGallery] = useState([]);
   const [typingProgress, setTypingProgress] = useState({ text: t.hero.badge, length: 0 });
 
@@ -149,18 +167,27 @@ export default function Hero() {
       </section>
 
       {/* ===== Collage ===== */}
-      <section className="hx-collage">
+      <motion.section
+        className="hx-collage"
+        variants={container}
+        initial={reduceMotion ? false : "hidden"}
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+      >
         {TILES.map(({ id, Icon, tone, box, cp }, index) => {
           const label = t.hero.galleryLabels[index];
 
           return (
-            <div
+            <motion.div
               key={id}
               data-id={id}
               role="img"
               aria-label={t.hero.galleryAlt(index + 1, gallery[index]?.alt || label)}
               className="hx-tile"
               style={{ "--l": `${box.l}%`, "--t": `${box.t}%`, "--w": `${box.w}%`, "--h": `${box.h}%` }}
+              variants={tileVariants}
+              whileHover={reduceMotion ? undefined : { y: -4, scale: 1.02, zIndex: 10 }}
+              transition={{ type: "spring", stiffness: 300, damping: 24 }}
             >
               <span
                 className="hx-fill"
@@ -171,16 +198,18 @@ export default function Hero() {
                     : `linear-gradient(135deg, ${tone})`,
                 }}
               >
-                <span className="hx-chip flex items-center gap-1 min-w-0 max-sm:max-w-[calc(100%-8px)] !start-[var(--cl)] max-sm:!start-[10px] rtl:![direction:rtl]" style={{ "--cl": `${cp.l}%`, "--ct": `${cp.t}%` }}>
+                <span
+                  className="hx-chip flex items-center gap-1 min-w-0 max-sm:max-w-[calc(100%-8px)] !start-[var(--cl)] max-sm:!start-[10px] rtl:![direction:rtl]"
+                  style={{ "--cl": `${cp.l}%`, "--ct": `${cp.t}%` }}
+                >
                   <b className="shrink-0"><Icon /></b>
                   <em className="min-w-0 flex-1 truncate">{label}</em>
-                  <ArrowRight className="shrink-0 rtl:-scale-x-100" />
                 </span>
               </span>
-            </div>
+            </motion.div>
           );
         })}
-      </section>
+      </motion.section>
     </div>
   );
 }
