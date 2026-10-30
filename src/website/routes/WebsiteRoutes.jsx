@@ -12,6 +12,7 @@ import LegalPage from "../legal/LegalPage";
 import ProjectDetail from "../projects/ProjectDetail";
 import ProjectsList from "../projects/ProjectsList";
 import Services from "../services/Services";
+import ContactUs from "../contact/ContactUs";
 
 export default function WebsiteRoutes() {
   return (
@@ -21,7 +22,7 @@ export default function WebsiteRoutes() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Navigate to="/#contact" replace />} />
+        <Route path="/contact" element={<ContactUs />} />
         <Route path="/blog" element={<BlogList />} />
         <Route path="/blog/:id" element={<BlogDetail />} />
         <Route path="/projects" element={<ProjectsList />} />
@@ -30,6 +31,7 @@ export default function WebsiteRoutes() {
         <Route path="/services" element={<Services />} />
         <Route path="/testimonials" element={<Navigate to="/service-policy" replace />} />
         <Route path="/cta" element={<CTA />} />
+        {/* <Route path="/contact" element={<ContactUs />} /> */}
         <Route path="/service-policy" element={<LegalPage documentKey="servicePolicy" />} />
         <Route path="/terms" element={<LegalPage documentKey="terms" />} />
         <Route path="*" element={<Navigate to="/" replace />} />
